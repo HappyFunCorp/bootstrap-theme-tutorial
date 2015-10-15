@@ -19,7 +19,7 @@
 // --------------Bootstrap-----------------------------
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
-
+// @import 'bootstrap/theme';
 
 // --------------Global definitions--------------------
 // For example (add your own!!):
@@ -35,6 +35,8 @@
 // --------------Components----------------------------
 // Create your own and modify/extend Bootstrap's. For example:
 @import 'components/panel';
+@import 'components/crush_pane';
+@import 'components/footer';
 
 
 // --------------Sections------------------------------

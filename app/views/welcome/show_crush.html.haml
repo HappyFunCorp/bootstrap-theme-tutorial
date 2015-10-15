@@ -1,0 +1,19 @@
+.container
+  .row
+    = render partial: 'application/sidenav'
+    .col-sm-9
+      = panel title: 'Your Crush' do
+        .panel-body
+          .crush_pane
+            .person
+              =image_tag "https://upload.wikimedia.org/wikipedia/en/2/22/MissPiggy.jpg"
+            .heart
+              %span.glyphicon.glyphicon-heart
+            .person
+              =image_tag "https://upload.wikimedia.org/wikipedia/en/6/62/Kermit_the_Frog.jpg"
+
+          .stats
+            %code
+              @user
+            has hearted your photos
+            %b 123 times!

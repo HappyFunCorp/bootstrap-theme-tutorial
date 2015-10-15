@@ -1,0 +1,27 @@
+$sticky_footer_height: 80px;
+
+html.sticky {
+  position: relative;
+  min-height: 100%;
+}
+
+@media (min-width: $screen-sm-min) {
+  .sticky body {
+    margin-bottom: $sticky_footer_height;
+  }
+
+  .sticky footer {
+    // margin-top: 1em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: $sticky_footer_height;
+  }
+}
+
+footer {
+  h3 {
+    font-size: 1.2em;
+  }
+}

@@ -1,10 +1,10 @@
 = navbar position: :static do
   = vertical do
     = link_to root_path do
-      %span.glyphicon.glyphicon-cloud
-      Home
+      %span.glyphicon.glyphicon-heart
+      Instacrush
   = horizontal do
     = nav class: 'navbar-right' do
-      = link_to 'Contact', ""
-      = link_to 'About', ""
+      = link_to 'Feed', show_feed_path
+      = link_to 'Crush', show_crush_path
       = render partial: "application/account_dropdown"

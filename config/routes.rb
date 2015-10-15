@@ -1,6 +1,20 @@
 Rails.application.routes.draw do
+  # Routes for mocking
+  get 'welcome/landing'
+  get 'welcome/loading_crush', as: :load_crush
+  post 'welcome/loading_crush'
+  get 'welcome/show_crush', as: :show_crush
+  get 'welcome/show_feed', as: :show_feed
+  get 'welcome/friends', as: :friends
+  get 'welcome/frenemies', as: :frenemies
+  get 'welcome/fans', as: :fans
+  get 'welcome/stars', as: :stars
+
+  # tmp
+  get 'welcome/loading_crush', as: :link_instagram
+
   devise_for :users, class_name: 'FormUser', :controllers => { omniauth_callbacks: 'omniauth_callbacks', registrations: 'registrations' }
-  root 'setup#index'
+  root 'welcome#landing'
   get '/setup' => 'setup#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

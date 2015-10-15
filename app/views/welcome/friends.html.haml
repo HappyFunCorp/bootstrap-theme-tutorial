@@ -1,0 +1,7 @@
+.container
+  .row
+    = render partial: 'application/sidenav'
+    .col-sm-9
+      .row
+        - 23.times do |count|
+          = render partial: "user", locals: { name: "User #{count}"}

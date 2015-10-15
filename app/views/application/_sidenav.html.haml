@@ -1,0 +1,17 @@
+.col-sm-3
+  = panel do
+    .panel-body
+      = nav as: :pills, layout: :stacked do
+        = link_to 'Your Crush', show_crush_path
+        = link_to friends_path do
+          Friends
+          %span.badge 250
+        = link_to fans_path do
+          Fans
+          %span.badge 10
+        = link_to frenemies_path do
+          Frienemies
+          %span.badge 20
+        = link_to stars_path do
+          Stars
+          %span.badge 12
