@@ -1,0 +1,30 @@
+.container
+  .page-header
+    = link_to instagram_posts_path, :class => 'btn btn-default' do
+      %span.glyphicon.glyphicon-list-alt
+      Back
+    = link_to edit_instagram_post_path(@instagram_post), :class => 'btn btn-primary' do
+      %span.glyphicon.glyphicon-pencil
+      Edit
+    %h1 Show instagram_post
+
+  %dl.dl-horizontal
+    %dt User:
+    %dd= @instagram_post.user_id
+    %dt Instagram user:
+    %dd= @instagram_post.instagram_user_id
+    %dt Media:
+    %dd= @instagram_post.media_id
+    %dt Media type:
+    %dd= @instagram_post.media_type
+    %dt Comments count:
+    %dd= @instagram_post.comments_count
+    %dt Likes count:
+    %dd= @instagram_post.likes_count
+    %dt Link:
+    %dd= @instagram_post.link
+    %dt Thumbnail url:
+    %dd= @instagram_post.thumbnail_url
+    %dt Standard url:
+    %dd= @instagram_post.standard_url
+

@@ -1,0 +1,4 @@
+= form_for @instagram_like, layout: :horizontal do |f|
+  = f.number_field :instagram_post_id, :class => 'form-control'
+  = f.number_field :instagram_user_id, :class => 'form-control'
+  = f.submit :class => 'btn btn-primary'

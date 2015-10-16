@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151015153524) do
+ActiveRecord::Schema.define(version: 20151016155830) do
 
   create_table "identities", force: :cascade do |t|
     t.integer  "user_id"
@@ -30,6 +30,47 @@ ActiveRecord::Schema.define(version: 20151015153524) do
 
   add_index "identities", ["user_id"], name: "index_identities_on_user_id"
 
+  create_table "instagram_comments", force: :cascade do |t|
+    t.integer  "instagram_post_id"
+    t.integer  "instagram_user_id"
+    t.string   "comment"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  create_table "instagram_likes", force: :cascade do |t|
+    t.integer  "instagram_post_id"
+    t.integer  "instagram_user_id"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  create_table "instagram_posts", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "instagram_user_id"
+    t.string   "media_id"
+    t.string   "media_type"
+    t.integer  "comments_count"
+    t.integer  "likes_count"
+    t.string   "link"
+    t.string   "thumbnail_url"
+    t.string   "standard_url"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  create_table "instagram_users", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "username"
+    t.string   "full_name"
+    t.string   "profile_picture"
+    t.integer  "media_count"
+    t.integer  "followed_count"
+    t.integer  "following_count"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: ""
     t.string   "encrypted_password",     default: "", null: false
@@ -43,6 +84,12 @@ ActiveRecord::Schema.define(version: 20151015153524) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.integer  "friend_count"
+    t.integer  "fan_count"
+    t.integer  "star_count"
+    t.integer  "frenemy_count"
+    t.datetime "last_synced"
+    t.string   "state"
   end
 
   add_index "users", ["email"], name: "index_users_on_email"

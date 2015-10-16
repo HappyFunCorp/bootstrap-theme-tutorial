@@ -1,0 +1,16 @@
+.container
+  .page-header
+    = link_to instagram_likes_path, :class => 'btn btn-default' do
+      %span.glyphicon.glyphicon-list-alt
+      Back
+    = link_to edit_instagram_like_path(@instagram_like), :class => 'btn btn-primary' do
+      %span.glyphicon.glyphicon-pencil
+      Edit
+    %h1 Show instagram_like
+
+  %dl.dl-horizontal
+    %dt Instagram post:
+    %dd= @instagram_like.instagram_post_id
+    %dt Instagram user:
+    %dd= @instagram_like.instagram_user_id
+

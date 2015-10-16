@@ -1,0 +1,27 @@
+.container
+  .page-header
+    = link_to new_instagram_comment_path, :class => 'btn btn-primary' do
+      %span.glyphicon.glyphicon-plus
+      New Instagram comment
+    %h1 Listing instagram_comments
+
+  .table-responsive
+    %table.table.table-striped.table-bordered.table-hover
+      %thead
+        %tr
+          %th Instagram post
+          %th Instagram user
+          %th Comment
+          %th
+          %th
+          %th
+
+      %tbody
+        - @instagram_comments.each do |instagram_comment|
+          %tr
+            %td= instagram_comment.instagram_post_id
+            %td= instagram_comment.instagram_user_id
+            %td= instagram_comment.comment
+            %td= link_to 'Show', instagram_comment
+            %td= link_to 'Edit', edit_instagram_comment_path(instagram_comment)
+            %td= link_to 'Destroy', instagram_comment, :data => { confirm: 'Are you sure?' }, :method => :delete

@@ -1,0 +1,2 @@
+module InstagramLikesHelper
+end

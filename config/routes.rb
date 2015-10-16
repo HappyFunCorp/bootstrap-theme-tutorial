@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :instagram_likes
+  resources :instagram_comments
+  resources :instagram_posts
+  resources :instagram_users
+
+
   # Routes for mocking
   get 'welcome/landing'
   get 'welcome/loading_crush', as: :load_crush

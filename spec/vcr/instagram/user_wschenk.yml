@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/users/self.json?access_token=509161.38c3f84.7d662d3ec84347f99b9574ef10168de1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Instagram Ruby Gem 1.1.5
+      Authorization:
+      - Token token="509161.38c3f84.7d662d3ec84347f99b9574ef10168de1"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Ratelimit-Remaining:
+      - '4998'
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Fri, 16 Oct 2015 14:57:19 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=b37b5f356ea57650937cf7e1d0dc5f60; expires=Fri, 14-Oct-2016 14:57:19
+        GMT; Max-Age=31449600; Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '247'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"meta":{"code":200},"data":{"username":"wschenk","bio":"","website":"http:\/\/willschenk.com","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11374591_955491831180543_1527410442_a.jpg","full_name":"Will
+        Schenk","counts":{"media":678,"followed_by":190,"follows":238},"id":"509161"}}'
+    http_version: 
+  recorded_at: Fri, 16 Oct 2015 14:57:18 GMT
+recorded_with: VCR 2.9.3

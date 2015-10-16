@@ -1,0 +1,9 @@
+.container
+  .page-header
+    = link_to instagram_comments_path, :class => 'btn btn-default' do
+      %span.glyphicon.glyphicon-list-alt
+      Back
+    %h1 New instagram_comment
+
+  = render 'form'
+
