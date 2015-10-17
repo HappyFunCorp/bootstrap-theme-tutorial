@@ -38,7 +38,7 @@ class InstagramUsersController < ApplicationController
 
   private
     def set_instagram_user
-      @instagram_user = InstagramUser.find(params[:id])
+      @instagram_user = InstagramUser.where(username: params[:username]).first
     end 
 
     def instagram_user_params

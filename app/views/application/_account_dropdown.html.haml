@@ -3,10 +3,11 @@
     Account <span class="caret"></span>
   %ul.dropdown-menu
     - if user_signed_in?
-      = link_to 'Profile', edit_user_registration_path
+      = link_to 'Feed', instagram_posts_path
+      / # = link_to 'Profile', edit_user_registration_path
       = link_to 'Sign Out', destroy_user_session_path, :method=>:delete
     - else
       / CONNECT
-      = link_to "Link with instagram", link_instagram_path
+      = link_to "Link with instagram", user_omniauth_authorize_path( :instagram )
       = link_to 'Sign In', new_user_session_path
       / = link_to 'Sign Up', new_user_registration_path

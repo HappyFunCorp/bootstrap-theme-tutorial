@@ -1,6 +1,7 @@
 class InstagramPost < ActiveRecord::Base
   belongs_to :instagram_user
   has_many :instagram_comments, dependent: :destroy
+  has_many :instagram_commentors, source: :instagram_user, through: :instagram_comments
   has_many :instagram_likes, dependent: :destroy
   has_many :instagram_likers, source: :instagram_user, through: :instagram_likes
 
@@ -13,18 +14,27 @@ class InstagramPost < ActiveRecord::Base
     p.link = media['link']
     p.thumbnail_url = media['images']['thumbnail']['url']
     p.standard_url = media['images']['standard_resolution']['url']
+    p.comments_count = media['comments']['count']
+    p.likes_count = media['likes']['count']
+    p.created_at = Time.at( media['created_time'].to_i )
 
     p.save
 
-    media['likes']['data'].each do |like|
-      liker = InstagramUser.reify( like )
-      InstagramLike.where( instagram_post_id: p.id, instagram_user_id: liker.id ).first_or_create
+    if p.likes_count < 500
+      media['likes']['data'].each do |like|
+        liker = InstagramUser.reify( like )
+        InstagramLike.where( instagram_post_id: p.id, instagram_user_id: liker.id ).first_or_create
+      end
     end
 
-    media['comments']['data'].each do |comment|
-      commentor = InstagramUser.reify( comment )
-      c = InstagramComment.where( instagram_post_id: p.id, instagram_user_id: commentor.id ).first_or_create
-      c.comment = comment['text']
+    if p.comments_count < 500
+      media['comments']['data'].each do |comment|
+        commentor = InstagramUser.reify( comment['from'] )
+        c = InstagramComment.where( instagram_post_id: p.id, instagram_user_id: commentor.id ).first_or_create
+        c.comment = comment['text']
+        c.created_at = Time.at( comment['created_time'].to_i )
+        c.save
+      end
     end
 
     p

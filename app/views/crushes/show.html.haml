@@ -1,0 +1,25 @@
+.container
+  .row
+    .center-panel
+      = panel title: "@#{@crush.instagram_user.username}'s Crush" do
+        .panel-body
+          .crush_pane
+            .person
+              =image_tag @crush.instagram_user.profile_picture
+            .heart
+              %span.glyphicon.glyphicon-heart
+            .person
+              - if current_user
+                = link_to posts_for_user_path( @crush.crush_user ) do
+                  = image_tag @crush.crush_user.profile_picture
+              - else
+                = image_tag @crush.crush_user.profile_picture
+
+          .stats
+            %code
+              = link_to "@#{@crush.crush_user.username}", posts_for_user_path( @crush.crush_user )
+            has hearted
+            %b= @crush.liked_count
+            and commented on
+            %b= @crush.comment_count
+            of your photos!

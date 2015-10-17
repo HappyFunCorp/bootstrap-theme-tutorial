@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151016155830) do
+ActiveRecord::Schema.define(version: 20151016194626) do
+
+  create_table "crushes", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "instagram_user_id"
+    t.integer  "crush_user_id"
+    t.integer  "comment_count"
+    t.integer  "liked_count"
+    t.string   "slug"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  add_index "crushes", ["slug"], name: "index_crushes_on_slug", unique: true
+  add_index "crushes", ["user_id"], name: "index_crushes_on_user_id"
 
   create_table "identities", force: :cascade do |t|
     t.integer  "user_id"
@@ -70,6 +84,8 @@ ActiveRecord::Schema.define(version: 20151016155830) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
+
+  add_index "instagram_users", ["username"], name: "index_instagram_users_on_username", unique: true
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: ""

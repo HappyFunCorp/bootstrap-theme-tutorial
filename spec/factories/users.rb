@@ -12,4 +12,11 @@ FactoryGirl.define do
     password '12345678'
     password_confirmation '12345678'
   end
+
+
+  factory :ig_user, parent: :user do
+    after( :create ) do |user, evaluator|
+      user.identities << create( :identity, provider: :instagram )
+    end
+  end
 end

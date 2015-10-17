@@ -5,7 +5,7 @@ html.sticky {
   min-height: 100%;
 }
 
-@media (min-width: $screen-sm-min) {
+// @media (min-width: $screen-sm-min) {
   .sticky body {
     margin-bottom: $sticky_footer_height;
   }
@@ -18,7 +18,7 @@ html.sticky {
     /* Set the fixed height of the footer here */
     height: $sticky_footer_height;
   }
-}
+// }
 
 footer {
   @include gradient-vertical($start-color: lighten($navbar-default-bg, 10%), $end-color: $navbar-default-bg);

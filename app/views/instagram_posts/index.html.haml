@@ -1,39 +1,22 @@
 .container
-  .page-header
-    = link_to new_instagram_post_path, :class => 'btn btn-primary' do
-      %span.glyphicon.glyphicon-plus
-      New Instagram post
-    %h1 Listing instagram_posts
+  - @instagram_posts.each do |post|
+    .row
+      .col-md-offset-3.col-md-6
+        .thumbnail
+          = link_to post.link do
+            = image_tag post.standard_url
 
-  .table-responsive
-    %table.table.table-striped.table-bordered.table-hover
-      %thead
-        %tr
-          %th User
-          %th Instagram user
-          %th Media
-          %th Media type
-          %th Comments count
-          %th Likes count
-          %th Link
-          %th Thumbnail url
-          %th Standard url
-          %th
-          %th
-          %th
+          .caption
+            %p
+              When
+              = time_ago_in_words post.created_at
+            %p
+              Liked by:
+              - post.instagram_likers.each do |user|
+                = link_to user.username, user
+            %p
+              Comments by:
+              - post.instagram_commentors.each do |user|
+                = link_to user.username, user
 
-      %tbody
-        - @instagram_posts.each do |instagram_post|
-          %tr
-            %td= instagram_post.user_id
-            %td= instagram_post.instagram_user_id
-            %td= instagram_post.media_id
-            %td= instagram_post.media_type
-            %td= instagram_post.comments_count
-            %td= instagram_post.likes_count
-            %td= instagram_post.link
-            %td= instagram_post.thumbnail_url
-            %td= instagram_post.standard_url
-            %td= link_to 'Show', instagram_post
-            %td= link_to 'Edit', edit_instagram_post_path(instagram_post)
-            %td= link_to 'Destroy', instagram_post, :data => { confirm: 'Are you sure?' }, :method => :delete
+          

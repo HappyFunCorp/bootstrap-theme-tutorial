@@ -3,8 +3,12 @@
     = link_to root_path do
       %span.glyphicon.glyphicon-heart
       Instacrush
+      %code Beta
   = horizontal do
     = nav class: 'navbar-right' do
-      = link_to 'Feed', show_feed_path
-      = link_to 'Crush', show_crush_path
-      = render partial: "application/account_dropdown"
+      = link_to 'Crush', crushes_path
+      = link_to 'Tops', instagram_posts_stats_path
+      - unless current_user
+        = link_to "Link with instagram", user_omniauth_authorize_path( :instagram )
+      - else
+        = render partial: "application/account_dropdown"

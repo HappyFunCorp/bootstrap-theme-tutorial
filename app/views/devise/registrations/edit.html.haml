@@ -33,12 +33,12 @@
               Connect your accounts
 
           .panel-body
-            %ul
-              - resource_class.omniauth_providers.each do |provider|
+            - resource_class.omniauth_providers.each do |provider|
+              %div
                 - if resource.identities.where( :provider => provider ).first
-                  %li= link_to "Reconnect with #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider), class: "btn btn-primary"
+                  = link_to "Reconnect with #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider), class: "btn btn-primary"
                 - else
-                  %li= link_to "Sign in with #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider), class: "btn btn-primary"
+                  = link_to "Sign in with #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider), class: "btn btn-primary"
 
       .panel.panel-default.only
 

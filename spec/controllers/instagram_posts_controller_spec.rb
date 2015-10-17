@@ -18,6 +18,9 @@ require 'rails_helper'
 # Message expectations are only used when there is no simpler way to specify
 # that an instance is receiving a specific message.
 
+ACCESS_TOKEN='509161.38c3f84.7d662d3ec84347f99b9574ef10168de1'
+
+
 RSpec.describe InstagramPostsController, type: :controller do
 
   # This should return the minimal set of attributes required to create a valid
@@ -37,11 +40,30 @@ RSpec.describe InstagramPostsController, type: :controller do
   let(:valid_session) { {} }
 
   describe "GET #index" do
-    it "assigns all instagram_posts as @instagram_posts" do
-      instagram_post = InstagramPost.create! valid_attributes
-      get :index, {}, valid_session
-      expect(assigns(:instagram_posts)).to eq([instagram_post])
+    it "redirects to loading page if user is stale" do
+      u = create( :ig_user )
+      u.instagram.update_attribute( :accesstoken, ACCESS_TOKEN )
+      login_with u
+      VCR.use_cassette( 'instagram/user.wschenk' ) do
+        get :index
+      end
+      p flash
+      expect( flash[:notice] ).to eq( "We've spoken to instagram!" )
+      # expect( response ).to set_flash
+      expect( response ).to have_http_status(:success)
     end
+
+    it "redirects to show crush page when user is fresh" do
+      u = create( :ig_user, last_synced: 1.hour.ago )
+      u.instagram_user = create( :instagram_user )
+      u.save
+      login_with u
+      get :index
+      expect( flash[:notice] ).to eq( nil )
+      expect( response ).to have_http_status(:success)
+    end
+
+    pending "it should only show the current_users posts"
   end
 
   describe "GET #show" do
@@ -51,109 +73,109 @@ RSpec.describe InstagramPostsController, type: :controller do
       expect(assigns(:instagram_post)).to eq(instagram_post)
     end
   end
-
-  describe "GET #new" do
-    it "assigns a new instagram_post as @instagram_post" do
-      get :new, {}, valid_session
-      expect(assigns(:instagram_post)).to be_a_new(InstagramPost)
-    end
-  end
-
-  describe "GET #edit" do
-    it "assigns the requested instagram_post as @instagram_post" do
-      instagram_post = InstagramPost.create! valid_attributes
-      get :edit, {:id => instagram_post.to_param}, valid_session
-      expect(assigns(:instagram_post)).to eq(instagram_post)
-    end
-  end
-
-  describe "POST #create" do
-    context "with valid params" do
-      it "creates a new InstagramPost" do
-        expect {
-          post :create, {:instagram_post => valid_attributes}, valid_session
-        }.to change(InstagramPost, :count).by(1)
-      end
-
-      it "assigns a newly created instagram_post as @instagram_post" do
-        post :create, {:instagram_post => valid_attributes}, valid_session
-        expect(assigns(:instagram_post)).to be_a(InstagramPost)
-        expect(assigns(:instagram_post)).to be_persisted
-      end
-
-      it "redirects to the created instagram_post" do
-        post :create, {:instagram_post => valid_attributes}, valid_session
-        expect(response).to redirect_to(InstagramPost.last)
-      end
-    end
-
-    context "with invalid params" do
-      it "assigns a newly created but unsaved instagram_post as @instagram_post" do
-        post :create, {:instagram_post => invalid_attributes}, valid_session
-        expect(assigns(:instagram_post)).to be_a_new(InstagramPost)
-      end
-
-      it "re-renders the 'new' template" do
-        post :create, {:instagram_post => invalid_attributes}, valid_session
-        expect(response).to render_template("new")
-      end
-    end
-  end
-
-  describe "PUT #update" do
-    context "with valid params" do
-      let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
-      }
-
-      it "updates the requested instagram_post" do
-        instagram_post = InstagramPost.create! valid_attributes
-        put :update, {:id => instagram_post.to_param, :instagram_post => new_attributes}, valid_session
-        instagram_post.reload
-        skip("Add assertions for updated state")
-      end
-
-      it "assigns the requested instagram_post as @instagram_post" do
-        instagram_post = InstagramPost.create! valid_attributes
-        put :update, {:id => instagram_post.to_param, :instagram_post => valid_attributes}, valid_session
-        expect(assigns(:instagram_post)).to eq(instagram_post)
-      end
-
-      it "redirects to the instagram_post" do
-        instagram_post = InstagramPost.create! valid_attributes
-        put :update, {:id => instagram_post.to_param, :instagram_post => valid_attributes}, valid_session
-        expect(response).to redirect_to(instagram_post)
-      end
-    end
-
-    context "with invalid params" do
-      it "assigns the instagram_post as @instagram_post" do
-        instagram_post = InstagramPost.create! valid_attributes
-        put :update, {:id => instagram_post.to_param, :instagram_post => invalid_attributes}, valid_session
-        expect(assigns(:instagram_post)).to eq(instagram_post)
-      end
-
-      it "re-renders the 'edit' template" do
-        instagram_post = InstagramPost.create! valid_attributes
-        put :update, {:id => instagram_post.to_param, :instagram_post => invalid_attributes}, valid_session
-        expect(response).to render_template("edit")
-      end
-    end
-  end
-
-  describe "DELETE #destroy" do
-    it "destroys the requested instagram_post" do
-      instagram_post = InstagramPost.create! valid_attributes
-      expect {
-        delete :destroy, {:id => instagram_post.to_param}, valid_session
-      }.to change(InstagramPost, :count).by(-1)
-    end
-
-    it "redirects to the instagram_posts list" do
-      instagram_post = InstagramPost.create! valid_attributes
-      delete :destroy, {:id => instagram_post.to_param}, valid_session
-      expect(response).to redirect_to(instagram_posts_url)
-    end
-  end
-
 end
+#   describe "GET #new" do
+#     it "assigns a new instagram_post as @instagram_post" do
+#       get :new, {}, valid_session
+#       expect(assigns(:instagram_post)).to be_a_new(InstagramPost)
+#     end
+#   end
+
+#   describe "GET #edit" do
+#     it "assigns the requested instagram_post as @instagram_post" do
+#       instagram_post = InstagramPost.create! valid_attributes
+#       get :edit, {:id => instagram_post.to_param}, valid_session
+#       expect(assigns(:instagram_post)).to eq(instagram_post)
+#     end
+#   end
+
+#   describe "POST #create" do
+#     context "with valid params" do
+#       it "creates a new InstagramPost" do
+#         expect {
+#           post :create, {:instagram_post => valid_attributes}, valid_session
+#         }.to change(InstagramPost, :count).by(1)
+#       end
+
+#       it "assigns a newly created instagram_post as @instagram_post" do
+#         post :create, {:instagram_post => valid_attributes}, valid_session
+#         expect(assigns(:instagram_post)).to be_a(InstagramPost)
+#         expect(assigns(:instagram_post)).to be_persisted
+#       end
+
+#       it "redirects to the created instagram_post" do
+#         post :create, {:instagram_post => valid_attributes}, valid_session
+#         expect(response).to redirect_to(InstagramPost.last)
+#       end
+#     end
+
+#     context "with invalid params" do
+#       it "assigns a newly created but unsaved instagram_post as @instagram_post" do
+#         post :create, {:instagram_post => invalid_attributes}, valid_session
+#         expect(assigns(:instagram_post)).to be_a_new(InstagramPost)
+#       end
+
+#       it "re-renders the 'new' template" do
+#         post :create, {:instagram_post => invalid_attributes}, valid_session
+#         expect(response).to render_template("new")
+#       end
+#     end
+#   end
+
+#   describe "PUT #update" do
+#     context "with valid params" do
+#       let(:new_attributes) {
+#         skip("Add a hash of attributes valid for your model")
+#       }
+
+#       it "updates the requested instagram_post" do
+#         instagram_post = InstagramPost.create! valid_attributes
+#         put :update, {:id => instagram_post.to_param, :instagram_post => new_attributes}, valid_session
+#         instagram_post.reload
+#         skip("Add assertions for updated state")
+#       end
+
+#       it "assigns the requested instagram_post as @instagram_post" do
+#         instagram_post = InstagramPost.create! valid_attributes
+#         put :update, {:id => instagram_post.to_param, :instagram_post => valid_attributes}, valid_session
+#         expect(assigns(:instagram_post)).to eq(instagram_post)
+#       end
+
+#       it "redirects to the instagram_post" do
+#         instagram_post = InstagramPost.create! valid_attributes
+#         put :update, {:id => instagram_post.to_param, :instagram_post => valid_attributes}, valid_session
+#         expect(response).to redirect_to(instagram_post)
+#       end
+#     end
+
+#     context "with invalid params" do
+#       it "assigns the instagram_post as @instagram_post" do
+#         instagram_post = InstagramPost.create! valid_attributes
+#         put :update, {:id => instagram_post.to_param, :instagram_post => invalid_attributes}, valid_session
+#         expect(assigns(:instagram_post)).to eq(instagram_post)
+#       end
+
+#       it "re-renders the 'edit' template" do
+#         instagram_post = InstagramPost.create! valid_attributes
+#         put :update, {:id => instagram_post.to_param, :instagram_post => invalid_attributes}, valid_session
+#         expect(response).to render_template("edit")
+#       end
+#     end
+#   end
+
+#   describe "DELETE #destroy" do
+#     it "destroys the requested instagram_post" do
+#       instagram_post = InstagramPost.create! valid_attributes
+#       expect {
+#         delete :destroy, {:id => instagram_post.to_param}, valid_session
+#       }.to change(InstagramPost, :count).by(-1)
+#     end
+
+#     it "redirects to the instagram_posts list" do
+#       instagram_post = InstagramPost.create! valid_attributes
+#       delete :destroy, {:id => instagram_post.to_param}, valid_session
+#       expect(response).to redirect_to(instagram_posts_url)
+#     end
+#   end
+
+# end

@@ -1,5 +1,6 @@
 class WelcomeController < ApplicationController
   def landing
+    redirect_to crushes_path if current_user
   end
 
   def show_feed

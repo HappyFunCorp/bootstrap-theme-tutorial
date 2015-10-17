@@ -1,23 +1,28 @@
 Rails.application.routes.draw do
-  resources :instagram_likes
-  resources :instagram_comments
-  resources :instagram_posts
-  resources :instagram_users
+  resources :crushes, path: 'crush', param: :slug
+  # resources :instagram_likes
+  # resources :instagram_comments
+  # resources :instagram_posts, path: "feed"
+  resources :instagram_users, param: :username, path: 'user'
 
+  get 'feed' => "instagram_posts#index", as: :instagram_posts
+  get 'top_stats' => "instagram_posts#stats", as: :instagram_posts_stats
+
+  get 'stats/:username' => "instagram_posts#for_user", as: :posts_for_user
 
   # Routes for mocking
-  get 'welcome/landing'
-  get 'welcome/loading_crush', as: :load_crush
-  post 'welcome/loading_crush'
-  get 'welcome/show_crush', as: :show_crush
-  get 'welcome/show_feed', as: :show_feed
-  get 'welcome/friends', as: :friends
-  get 'welcome/frenemies', as: :frenemies
-  get 'welcome/fans', as: :fans
-  get 'welcome/stars', as: :stars
+  # get 'welcome/landing'
+  # get 'welcome/loading_crush', as: :load_crush
+  # post 'welcome/loading_crush'
+  # # get 'welcome/show_crush', as: :show_crush
+  # # get 'welcome/show_feed', as: :show_feed
+  # get 'welcome/friends', as: :friends
+  # get 'welcome/frenemies', as: :frenemies
+  # get 'welcome/fans', as: :fans
+  # get 'welcome/stars', as: :stars
 
   # tmp
-  get 'welcome/loading_crush', as: :link_instagram
+  # get 'welcome/loading_crush', as: :link_instagram
 
   devise_for :users, class_name: 'FormUser', :controllers => { omniauth_callbacks: 'omniauth_callbacks', registrations: 'registrations' }
   root 'welcome#landing'

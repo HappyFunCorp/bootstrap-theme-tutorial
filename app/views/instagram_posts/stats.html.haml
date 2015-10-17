@@ -1,0 +1,39 @@
+.container
+  .row
+    .col-sm-4.col-xs-6.col-sm-offset-2
+      = panel title: "Most hearts" do
+        .panel-body
+          = nav as: :pills, layout: :stacked do
+            - @top_likers.each do |l|
+              %li
+                - u = InstagramUser.find(l['instagram_user_id'])
+                = link_to posts_for_user_path( u ) do
+                  = u.username
+                  %span.badge
+                    = l['cnt']
+
+    .col-sm-4.col-xs-6
+      = panel title: "Most Comments" do
+        .panel-body
+          = nav as: :pills, layout: :stacked do
+            - @top_comments.each do |l|
+              %li
+                - u = InstagramUser.find(l['instagram_user_id'])
+                = link_to posts_for_user_path( u ) do
+                  = u.username
+                  %span.badge
+                    = l['cnt']
+
+  .row    
+    - @top_photos.each do |t|
+      .col-xs-6.col-sm-3.col-md-2
+        .thumbnail
+          = link_to t.link do
+            = image_tag t.thumbnail_url
+          .caption
+            = t.likes_count
+            likes,
+            = t.comments_count
+            comments
+
+

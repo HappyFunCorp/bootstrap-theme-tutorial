@@ -1,7 +1,9 @@
 class User < ActiveRecord::Base
   has_one :instagram_user
 
+  has_many :crushes
   has_many :identities, dependent: :destroy
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :omniauthable, :database_authenticatable, :registerable,
@@ -16,13 +18,19 @@ class User < ActiveRecord::Base
 
   def stale?
     return true if last_synced.nil?
-    last_synced < 1.day.ago
+    last_synced < 12.hours.ago
   end
 
   def sync!
     return false if !stale?
 
+    logger.info "Calling sync for #{instagram.uid}"
+
+    logger.debug "Calling reify"
+    p "Calling reify"
     iu = InstagramUser.reify( instagram_client.user, self )
+    p "Syncing posts"
+    sync_instagram_posts
     update_attribute( :last_synced, Time.now )
     reload
     iu
@@ -41,4 +49,7 @@ class User < ActiveRecord::Base
     reload
   end
 
+  def crush
+    c = crushes.order( "created_at desc" ).first || Crush.find_for_user( self )
+  end
 end

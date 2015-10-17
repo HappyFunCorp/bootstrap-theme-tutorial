@@ -12,4 +12,23 @@ class ApplicationController < ActionController::Base
       end
     end
   end
+
+  def require_instagram_token
+    if current_user.nil? || current_user.instagram.nil?
+      store_location_for( :user, request.path )
+      redirect_to user_omniauth_authorize_path( :instagram )
+      return false
+    end
+  end
+
+  def require_instagram_user
+    if current_user.nil? || current_user.instagram.nil?
+      store_location_for( :user, request.path )
+      redirect_to user_omniauth_authorize_path( :instagram )
+      return false
+    elsif current_user.instagram_user.nil?
+      redirect_to load_crush_path
+      return false
+    end
+  end
 end

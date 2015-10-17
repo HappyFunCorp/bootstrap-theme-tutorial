@@ -11,5 +11,7 @@ class CreateInstagramUsers < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+
+    add_index :instagram_users, :username, unique: true
   end
 end

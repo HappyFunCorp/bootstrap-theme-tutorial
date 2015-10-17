@@ -1,9 +1,15 @@
 class InstagramUser < ActiveRecord::Base
+  extend FriendlyId
   belongs_to :user
-  has_many :instagram_posts
+  has_many :instagram_posts, dependent: :destroy
+  friendly_id :username, use: :slugged
+
+  def slug
+    username
+  end
   
   def self.reify( data, user = nil )
-    p data
+    # p data
     u = where( :username => data['username']).first_or_create
     u.user_id = user.id if user
     u.username = data['username']
