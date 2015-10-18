@@ -33,4 +33,7 @@
 
 
         .share
-          = button_to "Share on Facebook", "https://www.facebook.com/sharer.php?u=http%3A%2F%2Finstacrush.happyfuncorp.com%2Fcrush%2F#{@crush.slug}", class: "btn btn-default"
+          - if current_user
+            = button_to "Share on Facebook", "https://www.facebook.com/sharer.php?u=http%3A%2F%2Finstacrush.happyfuncorp.com%2Fcrush%2F#{@crush.slug}", class: "btn btn-default"
+          - else
+            = button_to "Find your crush!", user_omniauth_authorize_path( :instagram ), class: "btn btn-default btn-lg"
