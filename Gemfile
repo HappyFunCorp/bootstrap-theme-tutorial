@@ -91,3 +91,7 @@ gem 'omniauth'
 gem 'omniauth-instagram'
 gem 'instagram'
 gem 'friendly_id'
+
+gem 'activeadmin', github: 'activeadmin', branch: 'master'
+gem 'inherited_resources'
+gem 'dateslices'
