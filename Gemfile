@@ -53,6 +53,7 @@ end
 gem 'puma'
 gem 'rails_12factor'
 gem 'haml-rails'
+
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec'
@@ -65,7 +66,6 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'spring-commands-rspec'
   gem 'spring-commands-cucumber'
-  gem 'quiet_assets'
   gem 'launchy'
   gem 'vcr'
   gem 'faker'
@@ -79,6 +79,7 @@ end
 
 group :production do
   gem 'pg'
+  gem 'quiet_assets'
 end
 
 gem 'bootstrap-sass'

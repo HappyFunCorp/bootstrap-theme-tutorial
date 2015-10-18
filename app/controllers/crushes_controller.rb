@@ -14,6 +14,11 @@ class CrushesController < ApplicationController
   end 
 
   def show
+    if @crush.nil?
+      redirect_to root_path, flash: { error: "Couldn't find that crush!" }
+      return
+    end
+
     @title = "#{@crush.instagram_user.username}'s crush"
 
     set_meta_tags description: "Looks like #{@crush.crush_username} has a crush on #{@crush.main_username}.  See who has an instagram crush on you!"

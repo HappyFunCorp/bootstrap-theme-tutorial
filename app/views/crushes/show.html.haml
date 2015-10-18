@@ -30,3 +30,7 @@
             %code
               ="@#{@crush.instagram_user.username}"
             photos!
+
+
+        .share
+          = button_to "Share on Facebook", "https://www.facebook.com/sharer.php?u=http%3A%2F%2Finstacrush.happyfuncorp.com%2Fcrush%2F#{@crush.slug}", class: "btn btn-default"
