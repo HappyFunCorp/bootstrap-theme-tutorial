@@ -15,6 +15,16 @@ class CrushesController < ApplicationController
 
   def show
     @title = "#{@crush.instagram_user.username}'s crush"
+
+    set_meta_tags description: "Looks like #{@crush.crush_username} has a crush on #{@crush.main_username}.  See who has an instagram crush on you!"
+
+    set_meta_tags og: {
+      title:    "#{@crush.instagram_user.username}'s crush",
+      description: "Click on this link to see who your secret crush is on Instagram",
+      type:     'website',
+      url:      "http://instacrush.happyfuncorp.com#{crush_path(@crush)}",
+      image:    @crush.image_path
+    }
   end 
 
   private

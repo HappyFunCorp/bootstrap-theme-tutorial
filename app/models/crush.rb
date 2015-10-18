@@ -33,7 +33,7 @@ class Crush < ActiveRecord::Base
     crush_user = InstagramUser.find c[0]
     slug = "#{user.instagram_user.username} #{crush_user.username}".hash.abs.to_s(36)
 
-    create  user: user, 
+    crush = create  user: user,
             instagram_user_id: user.instagram_user.id,
             main_username: user.instagram_user.username,
             crush_user_id: c[0],
@@ -41,9 +41,14 @@ class Crush < ActiveRecord::Base
             comment_count: comment_total[c[0]], 
             liked_count: liked_total[c[0]],
             slug: slug
+
+    crush.make_image
+
+    crush
   end
 
   def make_image
+    logger.debug "Loading #{crush_user.profile_picture}"
     response = Faraday.get crush_user.profile_picture
     crush_file = Tempfile.new ["crush", ".jpg"]
     # crush_file = File.new( "crush.jpg", "wb" )
@@ -51,6 +56,7 @@ class Crush < ActiveRecord::Base
     crush_file.write response.body
     crush_file.close
 
+    logger.debug "Loading #{instagram_user.profile_picture}"
     response = Faraday.get instagram_user.profile_picture
     self_file = Tempfile.new ["self", ".jpg"]
     # self_file = File.new "self.jpg", "wb"
@@ -70,9 +76,7 @@ class Crush < ActiveRecord::Base
     gc.draw circle
 
     mask = circle.blur_image(0,1).negate
-
     mask.matte = false
-
 
     self_image = Magick::Image.read( self_file.path ).first
     self_image.matte = true
@@ -85,6 +89,7 @@ class Crush < ActiveRecord::Base
 
     heart_image = Magick::Image.read( File.join( Rails.root, "app/assets/images/heart.png" ).to_s ).first
 
+    logger.debug "Generated crush image"
     out_image = Magick::Image.new( 300, 150 )
     
     out_image.composite! self_image, 0, 0, Magick::OverCompositeOp
@@ -93,9 +98,22 @@ class Crush < ActiveRecord::Base
 
     out_image.write outfile_name
 
-    system "open #{outfile_name}"
+    save_to_s3 outfile_name
 
-    # outfile.close
+    outfile.close
+  end
 
+  def save_to_s3 filename
+    service = Aws::S3::Resource.new
+
+    logger.debug "Uploading #{filename} to S3"
+    bucket = service.bucket ENV['IMAGE_BUCKET_NAME']
+    object = bucket.object "crushes/#{slug}.jpg"
+    object.upload_file filename, {acl: 'public-read'}
+
+    url = object.public_url.to_s
+    logger.debug "File is now at #{url}"
+
+    update_attribute :image_path, url
   end
 end

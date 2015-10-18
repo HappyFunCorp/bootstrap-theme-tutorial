@@ -97,3 +97,4 @@ gem 'inherited_resources'
 gem 'dateslices'
 
 gem 'rmagick'
+gem 'aws-sdk-resources'
