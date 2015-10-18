@@ -22,4 +22,7 @@
             %b= @crush.liked_count
             and commented on
             %b= @crush.comment_count
-            of your photos!
+            of 
+            %code
+              ="@#{@crush.instagram_user.username}"
+            photos!

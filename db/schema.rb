@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151018000050) do
+ActiveRecord::Schema.define(version: 20151018015132) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -55,6 +55,9 @@ ActiveRecord::Schema.define(version: 20151018000050) do
     t.string   "slug"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+    t.string   "main_username"
+    t.string   "crush_username"
+    t.string   "image_path"
   end
 
   add_index "crushes", ["slug"], name: "index_crushes_on_slug", unique: true
