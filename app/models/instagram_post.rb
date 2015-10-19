@@ -21,10 +21,11 @@ class InstagramPost < ActiveRecord::Base
     p.save
 
     if p.likes_count < 500
-      media['likes']['data'].each do |like|
-        liker = InstagramUser.reify( like )
-        InstagramLike.where( instagram_post_id: p.id, instagram_user_id: liker.id ).first_or_create
-      end
+      p.find_media_likes user.instagram_client
+      # media['likes']['data'].each do |like|
+      #   liker = InstagramUser.reify( like )
+      #   InstagramLike.where( instagram_post_id: p.id, instagram_user_id: liker.id ).first_or_create
+      # end
     end
 
     if p.comments_count < 500
@@ -38,5 +39,12 @@ class InstagramPost < ActiveRecord::Base
     end
 
     p
+  end
+
+  def find_media_likes client
+    client.media_likes( media_id ).each do |like|
+      liker = InstagramUser.reify( like )
+      InstagramLike.where( instagram_post_id: id, instagram_user_id: liker.id ).first_or_create
+    end
   end
 end

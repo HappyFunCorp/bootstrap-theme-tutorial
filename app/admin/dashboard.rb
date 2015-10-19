@@ -18,8 +18,8 @@ ActiveAdmin.register_page "Dashboard" do
         end
       end
       column do
-        panel "Total Posts" do
-          render partial: "admin/chart", locals: { scope: 'instagram_posts' }
+        panel "Crushes" do
+          render partial: "admin/chart", locals: { scope: 'crushes' }
         end
       end
     end

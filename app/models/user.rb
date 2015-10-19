@@ -27,9 +27,9 @@ class User < ActiveRecord::Base
     logger.info "Calling sync for #{instagram.uid}"
 
     logger.debug "Calling reify"
-    p "Calling reify"
+    # p "Calling reify"
     iu = InstagramUser.reify( instagram_client.user, self )
-    p "Syncing posts"
+    logger.debug "Syncing posts"
     sync_instagram_posts
     update_attribute( :last_synced, Time.now )
     reload
@@ -50,6 +50,7 @@ class User < ActiveRecord::Base
   end
 
   def crush
-    c = crushes.order( "created_at desc" ).first || Crush.find_for_user( self )
+    # crushes.order( "created_at desc" ).first || 
+    Crush.find_for_user( self )
   end
 end

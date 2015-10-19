@@ -29,20 +29,19 @@ class Crush < ActiveRecord::Base
 
     c = results.sort_by { |id,cnt| -cnt }.first
 
+    crush = Crush.where( instagram_user_id: user.instagram_user.id, crush_user_id: c[0] ).first_or_create do |crush|
+      crush_user = InstagramUser.find c[0]
+      slug = "#{user.instagram_user.username} #{crush_user.username}".hash.abs.to_s(36)
 
-    crush_user = InstagramUser.find c[0]
-    slug = "#{user.instagram_user.username} #{crush_user.username}".hash.abs.to_s(36)
+      crush.user = user
+      crush.main_username = user.instagram_user.username
+      crush.crush_username = crush_user.username
+      crush.comment_count = comment_total[c[0]]
+      crush.liked_count = liked_total[c[0]]
+      crush.slug = slug
 
-    crush = create  user: user,
-            instagram_user_id: user.instagram_user.id,
-            main_username: user.instagram_user.username,
-            crush_user_id: c[0],
-            crush_username: crush_user.username,
-            comment_count: comment_total[c[0]], 
-            liked_count: liked_total[c[0]],
-            slug: slug
-
-    crush.make_image
+      crush.make_image
+    end
 
     crush
   end
