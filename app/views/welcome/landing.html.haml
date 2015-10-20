@@ -18,4 +18,4 @@
 
 
       .signin
-        = button_to "Find your crush!", user_omniauth_authorize_path( :instagram ), class: "btn btn-primary"
+        = link_to "Log in with instagram", user_omniauth_authorize_path( :instagram ), class: "btn btn-primary"

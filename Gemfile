@@ -79,7 +79,7 @@ end
 
 group :production do
   gem 'pg'
-  gem 'quiet_assets'
+  gem 'lograge'
 end
 
 gem 'bootstrap-sass'

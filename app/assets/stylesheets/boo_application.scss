@@ -14,10 +14,20 @@ $state-info-text: white;
 $body-bg: $background-color;
 $text-color: $dark-gray;
 
+$border-radius-base:        2px;
+
 // --------------Bootstrap-----------------------------
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
+.blackbottom {
+  background: black;
+  position: absolute;
+  top: 650px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
 // This is used by the devise generated views.
 .center-panel {
   @extend .col-sm-6;
@@ -59,6 +69,25 @@ $text-color: $dark-gray;
     background-size: 190px 198px;
     background-repeat: no-repeat;
     background-position: center;
+
+    .btn {
+      @include box-shadow( inset -2px -2px 2px rgba(0, 0, 0, 0.3) );
+      border: none;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 14px;
+      padding-left: 45px;
+
+      &::before {
+        background-image: image-url( 'btn_icon_instagram2x.png');
+        background-size: 19px 19px;
+        height: 19px;
+        width: 19px;
+        position: absolute;
+        content: '';
+        margin-left: -23px;
+      }
+    }
   }
 }
 
@@ -80,6 +109,13 @@ $text-color: $dark-gray;
     p {
       text-align: center;
     }
+
+    .stats {
+      margin: auto;
+      max-width: 270px;
+      padding-top: 2em;
+      padding-bottom: 3em;
+    }
   }
 }
 
@@ -99,7 +135,6 @@ $text-color: $dark-gray;
     font-family: 700;
     letter-spacing: 2px;
     @include box-shadow( 1px 1px 2px rgba(0, 0, 0, 0.3) );
-
   }
 
 }
@@ -136,16 +171,55 @@ $text-color: $dark-gray;
   text-align: center;
   padding-bottom: 1em;
 
-  .btn {
+  .btn.facebook {
     background-color: $facebookblue;
     color: white;
-    border-color: darken( $facebookblue, 10% );
+    @include box-shadow( inset -2px -2px 2px rgba(0, 0, 0, 0.3) );
+    border: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding-left: 45px;
+      
+    &::before {
+      background-image: image-url( 'btn_icon_facebook2x.png');
+      background-size: 9px 19px;
+      height: 19px;
+      width: 9px;
+      position: absolute;
+      content: '';
+      margin-left: -23px;
+    }
   }
+
+  .btn.instagram {
+    background: $brand-primary;
+    color: white;
+    @include box-shadow( inset -2px -2px 2px rgba(0, 0, 0, 0.3) );
+    border: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding-left: 45px;
+
+    &::before {
+      background-image: image-url( 'btn_icon_instagram2x.png');
+      background-size: 19px 19px;
+      height: 19px;
+      width: 19px;
+      position: absolute;
+      content: '';
+      margin-left: -23px;
+      // content: "hi there"
+    }
+  }
+
 }
 
 .panel {
   background-color: transparent;
   border: none;
+  box-shadow: none;
 
   .panel-heading {
     display: none;
@@ -154,7 +228,7 @@ $text-color: $dark-gray;
 
 
 .layout {
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
@@ -209,8 +283,8 @@ $text-color: $dark-gray;
     img {
       border-radius: 100%;
       border: 2px solid gray;
-      max-height: 150px;
-      max-width: 150px;
+      max-height: 125px;
+      max-width: 125px;
     }
   }
 
@@ -228,7 +302,30 @@ $text-color: $dark-gray;
   @include clearfix;
 }
 
-#footer {
-  background: black;
-  height: 1vh;
+.level_1 { z-index: 1; }
+.level_2 { z-index: 2; }
+.level_3 { z-index: 3; }
+.level_4 { z-index: 4; position: relative; }
+
+#flash {
+  position: relative;
+  z-index: 4;
+}
+
+footer {
+  text-align: center;
+  color: rgba( 255, 255, 255, .5 );
+  padding-top: 2em;
+
+  .small_header {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 11px;
+  }
+
+  .hfc_logo img {
+    width: 166px;
+    height: 38px;
+  }
 }

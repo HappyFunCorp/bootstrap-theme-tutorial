@@ -20,22 +20,31 @@
 
   %body{ :class => "#{ controller.controller_name }" }
     = render 'chromeframe'
-    .simple_nav
+    .simple_nav.level_4
       .container
         - if current_user
           = link_to 'Sign Out', destroy_user_session_path, :method=>:delete, class: "btn btn-warning btn-sm"
 
     = render 'flashes'
 
-    .layout
+    .layout.level_1
       .ted= image_tag 'art_ted_moon2x.png'
-    .grass
-    .layout
+    .grass.level_2
+    .layout.level_3
       .foreground= image_tag 'art_foreground2x.png'
-      
-    = yield
+    
+    .content.level_4
+      = yield
 
-    = render 'footer'
+    %footer#footer.level_4
+      .container
+        .small_header
+          Brought to you by
+        .hfc_logo
+          = link_to "http://happyfuncorp.com/" do
+            = image_tag "logo_hfc2x.png"
+
+    .blackbottom
 
     -# Javascript at the bottom for fast page loading
     = render 'javascripts'
