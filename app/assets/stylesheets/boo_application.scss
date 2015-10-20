@@ -1,0 +1,234 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,300);
+
+$font-family-sans-serif: 'Lato-Light', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$headings-font-family: 'Lato', "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$background-color: #2f3245;
+$dark-gray: #2f3245;
+$halloweenorange: #f7793d;
+$facebookblue: #3b5998;
+
+$brand-primary: $halloweenorange;
+$state-info-bg: $halloweenorange;
+$state-info-text: white;
+$body-bg: $background-color;
+$text-color: $dark-gray;
+
+// --------------Bootstrap-----------------------------
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+// This is used by the devise generated views.
+.center-panel {
+  @extend .col-sm-6;
+  @extend .col-sm-offset-3;
+
+  margin-top: 5em;
+
+  h1 {
+    text-indent: -99999px;
+    margin: 20px;
+    padding: 0;
+    background-image: url("BOO2x.png");
+    background-size: 205px 102px;
+    height: 125px;
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+}
+
+.welcome {
+  .crush_pane {
+    display: none;
+  }
+
+  p {
+    text-transform: uppercase;
+    width: 230px;
+    margin: auto;
+    text-align: center;
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  .signin {
+    padding-top: 250px;
+    background-image: image-url( 'art_intro_pumpkin2x.png' );
+    background-size: 190px 198px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.crushes {
+  .center-panel {
+    margin-top: 0px;
+    .panel-body {
+      padding-top: 185px;
+      background-image: image-url( 'logo_my_boo2x.png' );
+      background-size: 142px 165px;
+      background-repeat: no-repeat;
+      background-position: center top;      
+      a {
+        pointer-events: none;
+        cursor: default;
+      }
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+}
+
+.btn {
+  text-transform: uppercase;
+  padding: .75em 2em;
+}
+
+.simple_nav {
+  text-align: right;
+  padding-top: .5em;
+  .btn-warning {
+    color: white;
+    background-color: transparent; // $background-color;
+    border: none;
+    font-size: 11px;
+    font-family: 700;
+    letter-spacing: 2px;
+    @include box-shadow( 1px 1px 2px rgba(0, 0, 0, 0.3) );
+
+  }
+
+}
+
+.crush_pane {
+  text-align: center;
+
+  div {
+    display: inline;
+  }
+  .person {
+    img {
+      border-radius: 100%;
+      border: 2px solid gray;
+      max-height: 150px;
+    }
+  }
+
+  .heart {
+    margin-left: -40px;
+    margin-right: -40px;
+    span {
+      postion: relative;
+      top: 30px;
+      color: rgb( 230, 0, 0);
+      font-size: 75px;
+    }
+  }    
+
+  @include clearfix;
+}
+
+.share {
+  text-align: center;
+  padding-bottom: 1em;
+
+  .btn {
+    background-color: $facebookblue;
+    color: white;
+    border-color: darken( $facebookblue, 10% );
+  }
+}
+
+.panel {
+  background-color: transparent;
+  border: none;
+
+  .panel-heading {
+    display: none;
+  }
+}
+
+
+.layout {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  z-index:-1;
+
+  .ted {
+    width: 1192px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: -298px;
+    img {
+      height: 592px; // 1184px / 2;
+      width: 596px; // 1192px / 2;
+    }
+  }
+
+  .foreground {
+    width: 1200;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: -600px;
+
+    img {
+      height: 727px;
+      width: 1200px;
+    }
+  }
+}
+
+.grass {
+  background-image: image-url( 'bkg_grass2x.png' );
+  background-repeat: repeat-x;
+  background-size: 100px 161px;
+  height: 161px;
+  position: absolute;
+  top: 550px;
+  right: 0;
+  left: 0;
+}
+
+.crush_pane {
+  text-align: center;
+
+  div {
+    display: inline;
+  }
+  .person {
+    img {
+      border-radius: 100%;
+      border: 2px solid gray;
+      max-height: 150px;
+      max-width: 150px;
+    }
+  }
+
+  .heart {
+    margin-left: -40px;
+    margin-right: -40px;
+    span {
+      postion: relative;
+      top: 30px;
+      color: rgb( 230, 0, 0);
+      font-size: 75px;
+    }
+  }    
+
+  @include clearfix;
+}
+
+#footer {
+  background: black;
+  height: 1vh;
+}

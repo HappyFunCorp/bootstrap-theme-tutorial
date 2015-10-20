@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
+
   resources :crushes, path: 'crush', param: :slug
   # resources :instagram_likes
   # resources :instagram_comments

@@ -13,10 +13,10 @@
             %p
               Liked by:
               - post.instagram_likers.each do |user|
-                = link_to user.username, user
+                = link_to user.username, posts_for_user_path(user)
             %p
               Comments by:
               - post.instagram_commentors.each do |user|
-                = link_to user.username, user
+                = link_to user.username, posts_for_user_path(user)
 
           

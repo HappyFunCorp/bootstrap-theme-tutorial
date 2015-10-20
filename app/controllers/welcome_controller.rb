@@ -1,4 +1,6 @@
 class WelcomeController < ApplicationController
+  layout "boo" if ENV['BOO']
+
   def landing
     redirect_to crushes_path if current_user
   end

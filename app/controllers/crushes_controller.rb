@@ -1,4 +1,6 @@
 class CrushesController < ApplicationController
+  layout "boo" if ENV['BOO']
+  
   before_action :require_instagram_token, only: :index
   before_action :set_crush, only: [:show, :edit, :update, :destroy]
 

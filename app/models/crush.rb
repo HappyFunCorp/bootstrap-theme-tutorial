@@ -65,9 +65,19 @@ class Crush < ActiveRecord::Base
 
     outfile = Tempfile.new ["self", ".jpg"]
     outfile_name = outfile.path.to_s
-    p outfile_name
 
+    if ENV['BOO']
+      draw_boo_image self_file, crush_file, outfile_name
+    else
+      draw_regular_image self_file, crush_file, outfile_name
+    end
 
+    save_to_s3 outfile_name
+
+    outfile.close
+  end
+
+  def draw_regular_image self_file, crush_file, outfile_name
     circle = Magick::Image.new 150, 150
     gc = Magick::Draw.new
     gc.fill 'black'
@@ -91,15 +101,42 @@ class Crush < ActiveRecord::Base
     logger.debug "Generated crush image"
     out_image = Magick::Image.new( 300, 150 )
     
-    out_image.composite! self_image, 0, 0, Magick::OverCompositeOp
-    out_image.composite! crush_image, 150, 0, Magick::OverCompositeOp
+    out_image.composite! self_image, 150, 0, Magick::OverCompositeOp
+    out_image.composite! crush_image, 0, 0, Magick::OverCompositeOp
     out_image.composite! heart_image, 112, 50, Magick::OverCompositeOp
 
     out_image.write outfile_name
+  end
 
-    save_to_s3 outfile_name
+  def draw_boo_image self_file, crush_file, outfile_name
+    circle = Magick::Image.new 150, 150
+    gc = Magick::Draw.new
+    gc.fill 'black'
+    gc.circle 75, 75, 0, 75
+    gc.draw circle
 
-    outfile.close
+    mask = circle.blur_image(0,1).negate
+    mask.matte = false
+
+    self_image = Magick::Image.read( self_file.path ).first
+    self_image.matte = true
+    self_image.composite!(mask, Magick::CenterGravity, Magick::CopyOpacityCompositeOp)
+
+    # self_image.composite! 
+    crush_image = Magick::Image.read( crush_file.path ).first
+    crush_image.matte = true
+    crush_image.composite!(mask, Magick::CenterGravity, Magick::CopyOpacityCompositeOp)
+
+    heart_image = Magick::Image.read( File.join( Rails.root, "app/assets/images/heart.png" ).to_s ).first
+
+    logger.debug "Generated crush image"
+    out_image = Magick::Image.new( 300, 150 )
+    
+    out_image.composite! self_image, 150, 0, Magick::OverCompositeOp
+    out_image.composite! crush_image, 0, 0, Magick::OverCompositeOp
+    out_image.composite! heart_image, 112, 50, Magick::OverCompositeOp
+
+    out_image.write outfile_name
   end
 
   def save_to_s3 filename
@@ -114,5 +151,9 @@ class Crush < ActiveRecord::Base
     logger.debug "File is now at #{url}"
 
     update_attribute :image_path, url
+  end
+
+  def show_image?
+    !ENV['BOO'] && !image_path.blank?
   end
 end
