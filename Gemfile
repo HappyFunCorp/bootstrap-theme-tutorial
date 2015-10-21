@@ -103,4 +103,4 @@ gem 'aws-sdk-resources'
 
 gem 'delayed_job_active_record'
 gem 'activejob'
-
+gem 'quiet_assets'
