@@ -9,13 +9,13 @@ class ApplicationController < ActionController::Base
   def metatags
     set_meta_tags description: "See who has an instagram crush on you!"
     set_meta_tags og: {
-      title:    'Instacrush',
+      title:    "Who's your Boo?",
       type:     'website',
-      url:      'http://instacrush.happyfuncorp.com',
+      url:      'http://boo.happyfuncorp.com',
     }
 
     set_meta_tags twitter: {
-      card: "Instacrush",
+      card: "Who's your Boo?",
       site: "@HappyFunCorp"
     }
   end

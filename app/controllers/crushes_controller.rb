@@ -35,7 +35,7 @@ class CrushesController < ApplicationController
       title:    "#{@crush.instagram_user.username}'s crush",
       description: "Click on this link to see who your secret crush is on Instagram",
       type:     'website',
-      url:      "http://instacrush.happyfuncorp.com#{crush_path(@crush)}",
+      url:      "http://boo.happyfuncorp.com#{crush_path(@crush)}",
       image:    { _: @crush.image_path, width: 600, height: 315 }
     }
   end 
