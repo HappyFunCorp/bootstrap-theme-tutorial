@@ -15,6 +15,9 @@ class CrushesController < ApplicationController
     if current_user.state == 'synced'
       redirect_to current_user.crush
       return
+    elsif current_user.state == 'broken'
+      current_user.refresh
+      redirect_to user_omniauth_authorize_path( :instagram )
     end
   end
 
