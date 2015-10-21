@@ -244,6 +244,7 @@ GEM
     multi_xml (0.5.5)
     multipart-post (2.0.0)
     nenv (0.2.0)
+    newrelic_rpm (3.14.0.305)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     notiffany (0.0.8)
@@ -425,6 +426,7 @@ DEPENDENCIES
   lograge
   meta-tags
   modernizr-rails
+  newrelic_rpm
   omniauth
   omniauth-instagram
   pg

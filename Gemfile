@@ -80,6 +80,7 @@ end
 group :production do
   gem 'pg'
   gem 'lograge'
+  gem 'newrelic_rpm'
 end
 
 gem 'bootstrap-sass'
