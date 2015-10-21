@@ -66,8 +66,6 @@ class Crush < ActiveRecord::Base
     outfile = Tempfile.new ["self", ".jpg"]
     outfile_name = outfile.path.to_s
 
-    outfile_name = "out.jpg"
-
     if ENV['BOO']
       draw_boo_image self_file, crush_file, outfile_name
     else

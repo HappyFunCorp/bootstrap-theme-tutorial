@@ -31,7 +31,10 @@ class User < ActiveRecord::Base
   end
 
   def sync!
-    return false if !stale?
+    if !stale?
+      update_attribute( :state, 'synced' )
+      return false
+    end      
 
     logger.info "Calling sync for #{instagram.uid}"
 

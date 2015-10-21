@@ -19,7 +19,7 @@
       var update_value = function() {
         value = value + 5;
         if( value > 100 ) {
-          window.location = '#{ crushes_path }';
+          location.reload();
         }
 
         $(".progress-bar").css('width', value+'%').attr('aria-valuenow', value);
