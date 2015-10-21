@@ -20,6 +20,8 @@ Rails.application.routes.draw do
 
   get 'stats/:username' => "instagram_posts#for_user", as: :posts_for_user
 
+  get 'crushingit' => "crushes#loading", as: :loading_crush
+
   # Routes for mocking
   # get 'welcome/landing'
   # get 'welcome/loading_crush', as: :load_crush

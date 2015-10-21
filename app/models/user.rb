@@ -21,19 +21,38 @@ class User < ActiveRecord::Base
     last_synced < 12.hours.ago
   end
 
+  def sync
+    update_attribute :state, 'queued'
+    UpdateUserFeedJob.perform_later id
+  end
+
+  def queueable?
+    state != 'queued' && state != 'working'
+  end
+
   def sync!
     return false if !stale?
 
     logger.info "Calling sync for #{instagram.uid}"
 
-    logger.debug "Calling reify"
-    # p "Calling reify"
-    iu = InstagramUser.reify( instagram_client.user, self )
-    logger.debug "Syncing posts"
-    sync_instagram_posts
+    begin
+      logger.debug "Calling reify"
+      # p "Calling reify"
+      iu = InstagramUser.reify( instagram_client.user, self )
+      logger.debug "Syncing posts"
+      sync_instagram_posts
+      update_attribute( :state, 'synced' )
+    rescue
+      update_attribute :state, 'broken'
+    end
     update_attribute( :last_synced, Time.now )
     reload
     iu
+  end
+
+  def refresh
+    update_attribute :state, nil
+    update_attribute :last_synced, nil
   end
 
   def sync_instagram_posts

@@ -26,7 +26,6 @@ module Ic
     config.generators do |g|
       g.stylesheets = false
       g.scaffold_controller "scaffold_controller"
-    end
-  
-end
+    end  
+  end
 end

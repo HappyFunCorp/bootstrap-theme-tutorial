@@ -44,10 +44,8 @@ RSpec.describe InstagramPostsController, type: :controller do
       VCR.use_cassette( 'instagram/user.wschenk' ) do
         get :index
       end
-      p flash
-      expect( flash[:notice] ).to eq( "We've spoken to instagram!" )
-      # expect( response ).to set_flash
-      expect( response ).to have_http_status(:success)
+
+      expect( response ).to redirect_to( loading_crush_path )
     end
 
     it "redirects to show crush page when user is fresh" do

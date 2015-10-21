@@ -1,19 +1,22 @@
 class CrushesController < ApplicationController
   layout "boo" if ENV['BOO']
   
-  before_action :require_instagram_token, only: :index
+  before_action :require_instagram_token, only: [:index, :loading]
+  before_action :require_fresh_user, only: :index
   before_action :set_crush, only: [:show, :edit, :update, :destroy]
 
   respond_to :html, :json, :js
 
   def index
-    if current_user.stale?
-      current_user.sync!
-      flash[:notice] = "We've spoken to instagram!"
-    end
-
     redirect_to current_user.crush
-  end 
+  end
+
+  def loading
+    if current_user.state == 'synced'
+      redirect_to current_user.crush
+      return
+    end
+  end
 
   def show
     if @crush.nil?

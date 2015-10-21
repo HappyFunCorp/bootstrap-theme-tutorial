@@ -1,5 +1,6 @@
 class InstagramPostsController < ApplicationController
   before_action :require_instagram_token
+  before_action :require_fresh_user
   before_action :load_stats, only: [ :stats, :for_user ]
   before_action :set_instagram_post, only: [:show, :edit, :update, :destroy]
 
@@ -7,11 +8,6 @@ class InstagramPostsController < ApplicationController
 
   def index
     @title = "Instagram Feed"
-    if current_user.stale?
-      current_user.sync!
-      flash[:notice] = "We've spoken to instagram!"
-    end
-
     @instagram_posts = current_user.instagram_user.instagram_posts.all
   end 
 
@@ -20,21 +16,11 @@ class InstagramPostsController < ApplicationController
 
   def stats
     @title = "Top Users"
-    if current_user.stale?
-      current_user.sync!
-      flash[:notice] = "We've spoken to instagram!"
-    end
-
     @top_photos = @igu.instagram_posts.order( "likes_count desc" ).limit( 24 )
   end
 
   def for_user
     @title = "#{params[:username]}'s interaction with #{@igu.username}"
-    if current_user.stale?
-      current_user.sync!
-      flash[:notice] = "We've spoken to instagram!"
-    end
-
     @top_photos = []
 
     user = InstagramUser.where( username: params[:username] ).first

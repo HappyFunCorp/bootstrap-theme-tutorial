@@ -112,6 +112,11 @@ GEM
     dateslices (0.0.3)
       rails (~> 4.0)
     debug_inspector (0.0.2)
+    delayed_job (4.1.1)
+      activesupport (>= 3.0, < 5.0)
+    delayed_job_active_record (4.1.0)
+      activerecord (>= 3.0, < 5)
+      delayed_job (>= 3.0, < 5)
     devise (3.5.2)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -392,6 +397,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin!
+  activejob
   aws-sdk-resources
   bh
   bootstrap-sass
@@ -401,6 +407,7 @@ DEPENDENCIES
   cucumber-rails
   database_cleaner
   dateslices
+  delayed_job_active_record
   devise (~> 3.4)
   dotenv-rails
   factory_girl_rails

@@ -46,4 +46,18 @@ class ApplicationController < ActionController::Base
       return false
     end
   end
+
+  def require_fresh_user
+    if current_user.stale?
+      session[:redirect_path] = request.path
+
+      current_user.sync
+
+      logger.info "User is stale"
+      
+      redirect_to loading_crush_path
+
+      return false
+    end
+  end
 end

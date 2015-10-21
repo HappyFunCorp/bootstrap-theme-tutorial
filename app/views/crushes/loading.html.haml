@@ -1,0 +1,29 @@
+.container
+  .row
+    .center-panel
+      %h1 Talking to instagram...
+
+      = progress_bar percentage: 0, animated: true
+
+- content_for :javascripts do
+  :javascript
+    $( function() {
+      // This is just incase
+      setInterval( function() {
+        location.reload();
+      }, 10000 );
+
+
+
+      var value = 0;
+      var update_value = function() {
+        value = value + 5;
+        if( value > 100 ) {
+          window.location = '#{ crushes_path }';
+        }
+
+        $(".progress-bar").css('width', value+'%').attr('aria-valuenow', value);
+      }
+
+      setInterval( update_value, 250 );
+    } );

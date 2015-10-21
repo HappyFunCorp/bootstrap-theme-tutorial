@@ -99,3 +99,7 @@ gem 'dateslices'
 
 gem 'rmagick'
 gem 'aws-sdk-resources'
+
+gem 'delayed_job_active_record'
+gem 'activejob'
+

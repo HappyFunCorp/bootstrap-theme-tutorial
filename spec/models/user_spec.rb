@@ -41,4 +41,22 @@ RSpec.describe User, type: :model do
     expect( user.instagram_user ).to_not be_nil
     expect( user.last_synced ).to_not be_nil
   end
+
+  context "states" do
+    let( :user ) { build( :user ) }
+
+    it "should be stale by default" do
+      expect( user.stale? ).to be_truthy
+    end
+
+    it "should be queuable by default" do
+      expect( user.queueable? ).to be_truthy
+    end
+
+    it "should not be queable if it's queued already" do
+      user.update_attribute :state, :queued
+      user.reload
+      expect( user.queueable? ).to be_falsey
+    end
+  end
 end

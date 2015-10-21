@@ -1,0 +1,195 @@
+gem 'delayed_job_active_record'
+
+bundle
+rails generate delayed_job:active_record
+rake db:migrate
+rails generate job update_user_feed
+
+
+routes:
+  get 'crushingit' => "crush#loading", as: :loading_crush
+
+
+app_contoller:
+
+  def require_fresh_user
+    if current_user.stale?
+      session[:redirect_path] = request.path
+
+      current_user.sync
+
+      logger.info "User is stale"
+      
+      redirect_to loading_crush_path
+
+      return false
+    end
+  end
+
+
+crush_controller:
+    before_action :require_fresh_user, only: :index
+
+add before fileter to crush controller, instagram post controller, etc.
+
+
+class UpdateUserFeedJob < ActiveJob::Base
+  queue_as :default
+
+  def perform(*args)
+    user = User.find args[0]
+
+    user.update_attribute :state, 'working'
+
+    user.sync!
+  end
+end
+
+
+user:
+  def sync
+    update_attribute :state, 'queued'
+    UpdateUserFeedJob.perform_later id
+  end
+
+  def queueable?
+    state != 'queued' && state != 'working'
+  end
+
+  def sync!
+    return false if !stale?
+
+    logger.info "Calling sync for #{instagram.uid}"
+
+    logger.debug "Calling reify"
+    begin
+      logger.debug "Calling reify"
+      # p "Calling reify"
+      iu = InstagramUser.reify( instagram_client.user, self )
+      logger.debug "Syncing posts"
+      sync_instagram_posts
+      update_attribute( :state, 'synced' )
+    rescue
+      update_attribute :state, 'broken'
+    end
+    update_attribute( :last_synced, Time.now )
+    reload
+    iu
+  end
+
+Procfile:
+
+web: bundle exec puma -C config/puma.rb
+worker: bundle exec rake jobs:work
+
+
+
+spec_helper.rb
+  config.include ActiveJob::TestHelper
+
+
+job tests
+
+require 'rails_helper'
+
+RSpec.describe UpdateUserFeedJob, type: :job do
+  let( :user ) do 
+    user = create( :ig_user )
+    user.instagram.update_attribute :accesstoken, ACCESS_TOKEN
+    user
+  end
+
+  it "should set a job to syncing when it starts" do
+    assert_enqueued_with(job: UpdateUserFeedJob) do
+      user.sync
+    end
+
+    expect( user.state ).to eq( 'queued' )
+  end
+
+  it "should set the state to synced when done" do
+    VCR.use_cassette( 'instagram/user.wschenk' ) do
+      UpdateUserFeedJob.perform_now(user.id)
+    end
+
+    user.reload
+
+    expect( user.state ).to eq( 'synced' )
+  end
+
+  it "should handle a bad token error" do
+    user.instagram.update_attribute :accesstoken, "this_is_wrong"
+
+    VCR.use_cassette( 'instagram/badtoken' ) do
+      UpdateUserFeedJob.perform_now(user.id)
+    end
+
+    user.reload
+
+    expect( user.state ).to eq( 'broken' )
+  end
+end
+
+
+
+omniauth_controller:
+
+      @user = FormUser.find @user.id
+      @user.refresh
+
+
+user:
+  def refresh
+    update_attribute :state, nil
+    update_attribute :last_synced, nil
+  end
+
+
+
+instagram_post_controller_spec:
+
+    it "redirects to loading page if user is stale" do
+      u = create( :ig_user )
+      u.instagram.update_attribute( :accesstoken, ACCESS_TOKEN )
+      login_with u
+      VCR.use_cassette( 'instagram/user.wschenk' ) do
+        get :index
+      end
+
+      expect( response ).to redirect_to( loading_crush_path )
+    end
+
+
+
+
+crushes_controller_spec:
+require 'rails_helper'
+
+RSpec.describe CrushesController, type: :controller do
+  context "loading page" do
+    let( :user ) do 
+      user = create( :ig_user )
+      user.instagram.update_attribute :accesstoken, ACCESS_TOKEN
+      user
+    end
+    let( :crush ) { create( :crush, slug: "1234", user: user ) }
+
+    it "should return instagram user" do
+      login_with nil
+      get :loading
+
+      expect( response ).to redirect_to( user_omniauth_authorize_path( :instagram ) )
+    end
+
+    it "should redirect to the crush once it's loaded" do
+      login_with user
+      user.update_attribute :state, :synced
+
+      expect( crush ).to_not be_nil
+
+      expect( response ).to redirect_to( crush_path( crush ) )
+    end
+  end
+end
+
+
