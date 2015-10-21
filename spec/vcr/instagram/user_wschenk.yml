@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.instagram.com/v1/users/self.json?access_token=509161.38c3f84.7d662d3ec84347f99b9574ef10168de1
+    uri: https://api.instagram.com/v1/users/self.json?access_token=509161.38c3f84.10f08b0e76634691b6740ac2420a0b11
     body:
       encoding: US-ASCII
       string: ''
@@ -10,9 +10,9 @@ http_interactions:
       Accept:
       - application/json; charset=utf-8
       User-Agent:
-      - Instagram Ruby Gem 1.1.5
+      - Instagram Ruby Gem 1.1.6
       Authorization:
-      - Token token="509161.38c3f84.7d662d3ec84347f99b9574ef10168de1"
+      - Token token="509161.38c3f84.10f08b0e76634691b6740ac2420a0b11"
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -21,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       X-Ratelimit-Remaining:
-      - '4994'
+      - '4976'
       Content-Language:
       - en
       Expires:
@@ -35,25 +35,25 @@ http_interactions:
       Cache-Control:
       - private, no-cache, no-store, must-revalidate
       Date:
-      - Fri, 16 Oct 2015 19:41:46 GMT
+      - Wed, 21 Oct 2015 13:37:20 GMT
       Content-Type:
       - application/json; charset=utf-8
       Set-Cookie:
-      - csrftoken=94953e59be073d9147b89d75aeb2ba0f; expires=Fri, 14-Oct-2016 19:41:46
+      - csrftoken=8739347b9a5271b7b8b10088cf89f077; expires=Wed, 19-Oct-2016 13:37:20
         GMT; Max-Age=31449600; Path=/
       Connection:
       - keep-alive
       Content-Length:
-      - '247'
+      - '246'
     body:
       encoding: ASCII-8BIT
       string: '{"meta":{"code":200},"data":{"username":"wschenk","bio":"","website":"http:\/\/willschenk.com","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11374591_955491831180543_1527410442_a.jpg","full_name":"Will
-        Schenk","counts":{"media":678,"followed_by":190,"follows":238},"id":"509161"}}'
+        Schenk","counts":{"media":679,"followed_by":190,"follows":223},"id":"509161"}}'
     http_version: 
-  recorded_at: Fri, 16 Oct 2015 19:41:46 GMT
+  recorded_at: Wed, 21 Oct 2015 13:37:20 GMT
 - request:
     method: get
-    uri: https://api.instagram.com/v1/users/self.json?access_token=509161.38c3f84.7d662d3ec84347f99b9574ef10168de1
+    uri: https://api.instagram.com/v1/users/self.json?access_token=509161.38c3f84.10f08b0e76634691b6740ac2420a0b11
     body:
       encoding: US-ASCII
       string: ''
@@ -61,9 +61,9 @@ http_interactions:
       Accept:
       - application/json; charset=utf-8
       User-Agent:
-      - Instagram Ruby Gem 1.1.5
+      - Instagram Ruby Gem 1.1.6
       Authorization:
-      - Token token="509161.38c3f84.7d662d3ec84347f99b9574ef10168de1"
+      - Token token="509161.38c3f84.10f08b0e76634691b6740ac2420a0b11"
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -72,7 +72,7 @@ http_interactions:
       message: OK
     headers:
       X-Ratelimit-Remaining:
-      - '4993'
+      - '4975'
       Content-Language:
       - en
       Expires:
@@ -86,25 +86,25 @@ http_interactions:
       Cache-Control:
       - private, no-cache, no-store, must-revalidate
       Date:
-      - Fri, 16 Oct 2015 19:41:46 GMT
+      - Wed, 21 Oct 2015 13:37:20 GMT
       Content-Type:
       - application/json; charset=utf-8
       Set-Cookie:
-      - csrftoken=9b31a67fd427719336116e988c0f31f8; expires=Fri, 14-Oct-2016 19:41:46
+      - csrftoken=f025cd09691ad3ac3b67513b779178c9; expires=Wed, 19-Oct-2016 13:37:20
         GMT; Max-Age=31449600; Path=/
       Connection:
       - keep-alive
       Content-Length:
-      - '247'
+      - '246'
     body:
       encoding: ASCII-8BIT
       string: '{"meta":{"code":200},"data":{"username":"wschenk","bio":"","website":"http:\/\/willschenk.com","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11374591_955491831180543_1527410442_a.jpg","full_name":"Will
-        Schenk","counts":{"media":678,"followed_by":190,"follows":238},"id":"509161"}}'
+        Schenk","counts":{"media":679,"followed_by":190,"follows":223},"id":"509161"}}'
     http_version: 
-  recorded_at: Fri, 16 Oct 2015 19:41:46 GMT
+  recorded_at: Wed, 21 Oct 2015 13:37:20 GMT
 - request:
     method: get
-    uri: https://api.instagram.com/v1/users/self/media/recent.json?access_token=509161.38c3f84.7d662d3ec84347f99b9574ef10168de1
+    uri: https://api.instagram.com/v1/users/self/media/recent.json?access_token=509161.38c3f84.10f08b0e76634691b6740ac2420a0b11
     body:
       encoding: US-ASCII
       string: ''
@@ -112,9 +112,9 @@ http_interactions:
       Accept:
       - application/json; charset=utf-8
       User-Agent:
-      - Instagram Ruby Gem 1.1.5
+      - Instagram Ruby Gem 1.1.6
       Authorization:
-      - Token token="509161.38c3f84.7d662d3ec84347f99b9574ef10168de1"
+      - Token token="509161.38c3f84.10f08b0e76634691b6740ac2420a0b11"
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -123,7 +123,7 @@ http_interactions:
       message: OK
     headers:
       X-Ratelimit-Remaining:
-      - '4992'
+      - '4974'
       Content-Language:
       - en
       Expires:
@@ -137,21 +137,28 @@ http_interactions:
       Cache-Control:
       - private, no-cache, no-store, must-revalidate
       Date:
-      - Fri, 16 Oct 2015 19:41:46 GMT
+      - Wed, 21 Oct 2015 13:37:21 GMT
       Content-Type:
       - application/json; charset=utf-8
       Set-Cookie:
-      - csrftoken=37ac8f0daff7ebd32cb0a7fd1b2b237f; expires=Fri, 14-Oct-2016 19:41:46
+      - csrftoken=1a2120da37d274ef966862548e8d93af; expires=Wed, 19-Oct-2016 13:37:21
         GMT; Max-Age=31449600; Path=/
       Connection:
       - keep-alive
       Content-Length:
-      - '6388'
+      - '6450'
     body:
       encoding: ASCII-8BIT
-      string: '{"pagination":{"next_url":"https:\/\/api.instagram.com\/v1\/users\/509161\/media\/recent?access_token=509161.38c3f84.7d662d3ec84347f99b9574ef10168de1\u0026max_id=999574376162592962_509161","next_max_id":"999574376162592962_509161"},"meta":{"code":200},"data":[{"attribution":null,"videos":{"low_bandwidth":{"url":"https:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t50.2886-16\/12142820_173187186355504_737122116_s.mp4","width":480,"height":480},"standard_resolution":{"url":"https:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t50.2886-16\/12078374_393129877543277_2058319508_n.mp4","width":640,"height":640},"low_resolution":{"url":"https:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t50.2886-16\/12142820_173187186355504_737122116_s.mp4","width":480,"height":480}},"tags":[],"type":"video","location":null,"comments":{"count":1,"data":[{"created_time":"1444694928","text":"I''m
-        back \ud83d\udc4b\ud83c\udffc (I''m assuming that''s a waving hand.)","from":{"username":"mariaselkephillips","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/s150x150\/11821111_912451098821539_550842321_a.jpg","id":"342170946","full_name":""},"id":"1094502844695907170"}]},"filter":"Slumber","created_time":"1444686907","link":"https:\/\/instagram.com\/p\/8wN1eZQQke\/","likes":{"count":12,"data":[{"username":"jothamwb","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11887048_849043215181429_1133387827_a.jpg","id":"6678555","full_name":"jothamwb"},{"username":"fox_mulder","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/11312135_1649357518629852_1263300749_a.jpg","id":"34871643","full_name":""},{"username":"abkerr","profile_picture":"http:\/\/photos-e.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11887097_136994796640524_488471680_a.jpg","id":"9743780","full_name":"Andrea
-        Shulski"},{"username":"sassy44a","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/11424689_1648989472002327_2147279009_a.jpg","id":"32729439","full_name":""}]},"images":{"low_resolution":{"url":"https:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-15\/s320x320\/e15\/12081263_1074441512566901_553589890_n.jpg","width":320,"height":320},"thumbnail":{"url":"https:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-15\/s150x150\/e15\/12081263_1074441512566901_553589890_n.jpg","width":150,"height":150},"standard_resolution":{"url":"https:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-15\/e15\/12081263_1074441512566901_553589890_n.jpg","width":640,"height":640}},"users_in_photo":[],"caption":{"created_time":"1444686907","text":"Slow
+      string: '{"pagination":{"next_url":"https:\/\/api.instagram.com\/v1\/users\/509161\/media\/recent?access_token=509161.38c3f84.10f08b0e76634691b6740ac2420a0b11\u0026max_id=1003690279569525040_509161","next_max_id":"1003690279569525040_509161"},"meta":{"code":200},"data":[{"attribution":null,"tags":[],"type":"image","location":{"latitude":40.7089195,"name":"Paperless
+        Post","longitude":-74.0114594,"id":234328696},"comments":{"count":0,"data":[]},"filter":"Clarendon","created_time":"1445378750","link":"https:\/\/instagram.com\/p\/9E1bDewQmx\/","likes":{"count":12,"data":[{"username":"heddabird","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xpa1\/t51.2885-19\/10538747_1478782922369115_1342617348_a.jpg","id":"2479834","full_name":"Hedda
+        Burnett"},{"username":"jothamwb","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11887048_849043215181429_1133387827_a.jpg","id":"6678555","full_name":"jothamwb"},{"username":"dianapittman","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfp1\/t51.2885-19\/891441_1454070734860888_1036214543_a.jpg","id":"22965186","full_name":""},{"username":"mmburleson","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/s150x150\/11371011_898468863563827_475575460_a.jpg","id":"4628023","full_name":"Maggie
+        Burleson"}]},"images":{"low_resolution":{"url":"https:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-15\/s320x320\/e35\/12144229_1529502674006761_719460220_n.jpg","width":320,"height":320},"thumbnail":{"url":"https:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-15\/s150x150\/e35\/12144229_1529502674006761_719460220_n.jpg","width":150,"height":150},"standard_resolution":{"url":"https:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-15\/s640x640\/sh0.08\/e35\/12144229_1529502674006761_719460220_n.jpg","width":640,"height":640}},"users_in_photo":[],"caption":{"created_time":"1445378750","text":"Just
+        a regular lobby I guess","from":{"username":"wschenk","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11374591_955491831180543_1527410442_a.jpg","id":"509161","full_name":"Will
+        Schenk"},"id":"1100239170804189919"},"user_has_liked":false,"id":"1100239164613396913_509161","user":{"username":"wschenk","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11374591_955491831180543_1527410442_a.jpg","id":"509161","full_name":"Will
+        Schenk"}},{"attribution":null,"videos":{"low_bandwidth":{"url":"https:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t50.2886-16\/12142820_173187186355504_737122116_s.mp4","width":480,"height":480},"standard_resolution":{"url":"https:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t50.2886-16\/12078374_393129877543277_2058319508_n.mp4","width":640,"height":640},"low_resolution":{"url":"https:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t50.2886-16\/12142820_173187186355504_737122116_s.mp4","width":480,"height":480}},"tags":[],"type":"video","location":null,"comments":{"count":1,"data":[{"created_time":"1444694928","text":"I''m
+        back \ud83d\udc4b\ud83c\udffc (I''m assuming that''s a waving hand.)","from":{"username":"mariaselkephillips","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/s150x150\/11821111_912451098821539_550842321_a.jpg","id":"342170946","full_name":""},"id":"1094502844695907170"}]},"filter":"Slumber","created_time":"1444686907","link":"https:\/\/instagram.com\/p\/8wN1eZQQke\/","likes":{"count":13,"data":[{"username":"fox_mulder","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/11312135_1649357518629852_1263300749_a.jpg","id":"34871643","full_name":""},{"username":"abkerr","profile_picture":"http:\/\/photos-e.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11887097_136994796640524_488471680_a.jpg","id":"9743780","full_name":"Andrea
+        Shulski"},{"username":"g.letigre","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/s150x150\/12104953_114163268939591_932664066_a.jpg","id":"55526350","full_name":"Gwyneth
+        Alberetti"},{"username":"sassy44a","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/11424689_1648989472002327_2147279009_a.jpg","id":"32729439","full_name":""}]},"images":{"low_resolution":{"url":"https:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-15\/s320x320\/e15\/12081263_1074441512566901_553589890_n.jpg","width":320,"height":320},"thumbnail":{"url":"https:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-15\/s150x150\/e15\/12081263_1074441512566901_553589890_n.jpg","width":150,"height":150},"standard_resolution":{"url":"https:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-15\/e15\/12081263_1074441512566901_553589890_n.jpg","width":640,"height":640}},"users_in_photo":[],"caption":{"created_time":"1444686907","text":"Slow
         mo action shot","from":{"username":"wschenk","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11374591_955491831180543_1527410442_a.jpg","id":"509161","full_name":"Will
         Schenk"},"id":"1094435605103839312"},"user_has_liked":false,"id":"1094435558823889182_509161","user":{"username":"wschenk","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11374591_955491831180543_1527410442_a.jpg","id":"509161","full_name":"Will
         Schenk"}},{"attribution":null,"tags":[],"type":"image","location":null,"comments":{"count":2,"data":[{"created_time":"1444494655","text":"What
@@ -179,7 +186,7 @@ http_interactions:
         want to high five him!","from":{"username":"dianapittman","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfp1\/t51.2885-19\/891441_1454070734860888_1036214543_a.jpg","id":"22965186","full_name":""},"id":"1074807164729624956"}]},"filter":"Ludwig","created_time":"1442322763","link":"https:\/\/instagram.com\/p\/7pwlvLQQug\/","likes":{"count":25,"data":[{"username":"rucymetohazof","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/s150x150\/11419095_891146914285965_44434548_a.jpg","id":"1908367808","full_name":"\u041e\u043a\u0441\u0430\u043d\u0430"},{"username":"dtzerakyluq","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11373831_490746437767368_635425474_a.jpg","id":"1943974872","full_name":"Zera"},{"username":"zygawuxu","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11312035_678486692286885_1256598626_a.jpg","id":"1921967813","full_name":"Sandra"},{"username":"dtinatybek","profile_picture":"http:\/\/photos-h.ak.instagram.com\/hphotos-ak-xaf1\/t51.2885-19\/s150x150\/11918005_161362370869591_1051348437_a.jpg","id":"1933974877","full_name":"Inna"}]},"images":{"low_resolution":{"url":"https:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-15\/s320x320\/e35\/11899509_858684440879720_1210041624_n.jpg","width":320,"height":320},"thumbnail":{"url":"https:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-15\/s150x150\/e35\/11899509_858684440879720_1210041624_n.jpg","width":150,"height":150},"standard_resolution":{"url":"https:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-15\/s640x640\/sh0.08\/e35\/11899509_858684440879720_1210041624_n.jpg","width":640,"height":640}},"users_in_photo":[],"caption":{"created_time":"1442322763","text":"Baby
         selfie!","from":{"username":"wschenk","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11374591_955491831180543_1527410442_a.jpg","id":"509161","full_name":"Will
         Schenk"},"id":"1074603687315310771"},"user_has_liked":false,"id":"1074603685612424096_509161","user":{"username":"wschenk","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11374591_955491831180543_1527410442_a.jpg","id":"509161","full_name":"Will
-        Schenk"}},{"attribution":null,"tags":[],"type":"image","location":null,"comments":{"count":0,"data":[]},"filter":"Slumber","created_time":"1441825804","link":"https:\/\/instagram.com\/p\/7a8tzmwQje\/","likes":{"count":22,"data":[{"username":"rucymetohazof","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/s150x150\/11419095_891146914285965_44434548_a.jpg","id":"1908367808","full_name":"\u041e\u043a\u0441\u0430\u043d\u0430"},{"username":"sunnysettondepoortere","profile_picture":"http:\/\/photos-g.ak.instagram.com\/hphotos-ak-xaf1\/t51.2885-19\/s150x150\/12142314_1683726611861486_1194247452_a.jpg","id":"1215137313","full_name":"Sunny
+        Schenk"}},{"attribution":null,"tags":[],"type":"image","location":null,"comments":{"count":0,"data":[]},"filter":"Slumber","created_time":"1441825804","link":"https:\/\/instagram.com\/p\/7a8tzmwQje\/","likes":{"count":22,"data":[{"username":"rucymetohazof","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/s150x150\/11419095_891146914285965_44434548_a.jpg","id":"1908367808","full_name":"\u041e\u043a\u0441\u0430\u043d\u0430"},{"username":"sunnysettondepoortere","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xaf1\/t51.2885-19\/s150x150\/12141888_1191241597558424_1727665381_a.jpg","id":"1215137313","full_name":"Sunny
         Setton De Poortere"},{"username":"zygawuxu","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11312035_678486692286885_1256598626_a.jpg","id":"1921967813","full_name":"Sandra"},{"username":"dtinatybek","profile_picture":"http:\/\/photos-h.ak.instagram.com\/hphotos-ak-xaf1\/t51.2885-19\/s150x150\/11918005_161362370869591_1051348437_a.jpg","id":"1933974877","full_name":"Inna"}]},"images":{"low_resolution":{"url":"https:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-15\/s320x320\/e35\/11934605_1494078774218036_1935133811_n.jpg","width":320,"height":320},"thumbnail":{"url":"https:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-15\/s150x150\/e35\/11934605_1494078774218036_1935133811_n.jpg","width":150,"height":150},"standard_resolution":{"url":"https:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-15\/s640x640\/sh0.08\/e35\/11934605_1494078774218036_1935133811_n.jpg","width":640,"height":640}},"users_in_photo":[],"caption":{"created_time":"1441825804","text":"Cousins","from":{"username":"wschenk","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11374591_955491831180543_1527410442_a.jpg","id":"509161","full_name":"Will
         Schenk"},"id":"1070434893885934270"},"user_has_liked":false,"id":"1070434892032051422_509161","user":{"username":"wschenk","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11374591_955491831180543_1527410442_a.jpg","id":"509161","full_name":"Will
         Schenk"}},{"attribution":null,"tags":[],"type":"image","location":{"latitude":40.957804165,"name":"Tesla
@@ -255,12 +262,1141 @@ http_interactions:
         Burnett"},{"username":"jothamwb","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11887048_849043215181429_1133387827_a.jpg","id":"6678555","full_name":"jothamwb"},{"username":"typingmonkette","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xaf1\/t51.2885-19\/11333716_882120895189528_1102832628_a.jpg","id":"10162618","full_name":"dig"},{"username":"bschippers718","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11326268_1472786479703760_19158020_a.jpg","id":"3197943","full_name":""}]},"images":{"low_resolution":{"url":"https:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-15\/s320x320\/e15\/11430214_385407731655217_41441793_n.jpg","width":320,"height":320},"thumbnail":{"url":"https:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-15\/s150x150\/e15\/11430214_385407731655217_41441793_n.jpg","width":150,"height":150},"standard_resolution":{"url":"https:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-15\/e15\/11430214_385407731655217_41441793_n.jpg","width":640,"height":640}},"users_in_photo":[],"caption":{"created_time":"1433869226","text":"Dog
         hair closeup","from":{"username":"wschenk","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11374591_955491831180543_1527410442_a.jpg","id":"509161","full_name":"Will
         Schenk"},"id":"1003690280936868495"},"user_has_liked":false,"id":"1003690279569525040_509161","user":{"username":"wschenk","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11374591_955491831180543_1527410442_a.jpg","id":"509161","full_name":"Will
-        Schenk"}},{"attribution":null,"tags":[],"type":"image","location":null,"comments":{"count":0,"data":[]},"filter":"Mayfair","created_time":"1433378572","link":"https:\/\/instagram.com\/p\/3fM5lhwQjC\/","likes":{"count":7,"data":[{"username":"heddabird","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xpa1\/t51.2885-19\/10538747_1478782922369115_1342617348_a.jpg","id":"2479834","full_name":"Hedda
-        Burnett"},{"username":"jothamwb","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11887048_849043215181429_1133387827_a.jpg","id":"6678555","full_name":"jothamwb"},{"username":"jesseresnick","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11333403_694389467358997_907186103_a.jpg","id":"3151236","full_name":"Jesse
-        Resnick"},{"username":"rsreusser","profile_picture":"http:\/\/photos-g.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11363738_434376690092406_1533990018_a.jpg","id":"11616638","full_name":"rsreusser"}]},"images":{"low_resolution":{"url":"https:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-15\/s320x320\/e15\/11376689_961126570584331_594624018_n.jpg","width":320,"height":320},"thumbnail":{"url":"https:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-15\/s150x150\/e15\/11376689_961126570584331_594624018_n.jpg","width":150,"height":150},"standard_resolution":{"url":"https:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-15\/e15\/11376689_961126570584331_594624018_n.jpg","width":640,"height":640}},"users_in_photo":[],"caption":{"created_time":"1433378572","text":"View
-        from nj","from":{"username":"wschenk","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11374591_955491831180543_1527410442_a.jpg","id":"509161","full_name":"Will
-        Schenk"},"id":"999574377345387219"},"user_has_liked":false,"id":"999574376162592962_509161","user":{"username":"wschenk","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11374591_955491831180543_1527410442_a.jpg","id":"509161","full_name":"Will
         Schenk"}}]}'
     http_version: 
-  recorded_at: Fri, 16 Oct 2015 19:41:46 GMT
+  recorded_at: Wed, 21 Oct 2015 13:37:21 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/media/1100239164613396913_509161/likes.json?access_token=509161.38c3f84.10f08b0e76634691b6740ac2420a0b11
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Instagram Ruby Gem 1.1.6
+      Authorization:
+      - Token token="509161.38c3f84.10f08b0e76634691b6740ac2420a0b11"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Ratelimit-Remaining:
+      - '4973'
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Wed, 21 Oct 2015 13:37:21 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=725fecc03fb21f6e0380b9a6e81d319a; expires=Wed, 19-Oct-2016 13:37:21
+        GMT; Max-Age=31449600; Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '805'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"meta":{"code":200},"data":[{"username":"errjordan1","profile_picture":"http:\/\/photos-b.ak.instagram.com\/hphotos-ak-xat1\/t51.2885-19\/10843801_670788809707673_2126137396_a.jpg","id":"1149226354","full_name":"Jordan"},{"username":"kristinaburnett","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/l\/t51.2885-19\/11349121_722977264496938_1308727401_a.jpg","id":"710763788","full_name":"Kristina
+        Burnett"},{"username":"assiatou2","profile_picture":"http:\/\/photos-h.ak.instagram.com\/hphotos-ak-xap1\/t51.2885-19\/10831989_873220442770127_1720332566_a.jpg","id":"291891635","full_name":"Assiatou
+        Lea"},{"username":"philip_chaffee","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/outbound-distillery\/t0.0-20\/OBPTH\/profiles\/anonymousUser.jpg","id":"191309896","full_name":""},{"username":"fox_mulder","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/11312135_1649357518629852_1263300749_a.jpg","id":"34871643","full_name":""},{"username":"dineshvasudevan","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/10547240_483836381797424_925871161_a.jpg","id":"34727323","full_name":"Dinesh"},{"username":"dianapittman","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfp1\/t51.2885-19\/891441_1454070734860888_1036214543_a.jpg","id":"22965186","full_name":""},{"username":"jothamwb","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11887048_849043215181429_1133387827_a.jpg","id":"6678555","full_name":"jothamwb"},{"username":"mmburleson","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/s150x150\/11371011_898468863563827_475575460_a.jpg","id":"4628023","full_name":"Maggie
+        Burleson"},{"username":"heddabird","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xpa1\/t51.2885-19\/10538747_1478782922369115_1342617348_a.jpg","id":"2479834","full_name":"Hedda
+        Burnett"},{"username":"richwithpossibility","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/s150x150\/11809905_1477451342582463_215970865_a.jpg","id":"833163","full_name":"Rich
+        Kearney"},{"username":"jefficly","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xpf1\/t51.2885-19\/10919129_821356947944424_856798616_a.jpg","id":"114083","full_name":"Jeff
+        Ng"}]}'
+    http_version: 
+  recorded_at: Wed, 21 Oct 2015 13:37:21 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/media/1094435558823889182_509161/likes.json?access_token=509161.38c3f84.10f08b0e76634691b6740ac2420a0b11
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Instagram Ruby Gem 1.1.6
+      Authorization:
+      - Token token="509161.38c3f84.10f08b0e76634691b6740ac2420a0b11"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Ratelimit-Remaining:
+      - '4972'
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Wed, 21 Oct 2015 13:37:21 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=df3b8c114ff4c9955d505a485d9e9be1; expires=Wed, 19-Oct-2016 13:37:21
+        GMT; Max-Age=31449600; Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '776'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"meta":{"code":200},"data":[{"username":"loveqbde7","profile_picture":"http:\/\/photos-f.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11007850_1377110875923605_1154302703_a.jpg","id":"1666758688","full_name":""},{"username":"dimzayan","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/s150x150\/11881584_672745139492208_1930840665_a.jpg","id":"1364644333","full_name":"Gregory
+        Mirzayantz"},{"username":"errjordan1","profile_picture":"http:\/\/photos-b.ak.instagram.com\/hphotos-ak-xat1\/t51.2885-19\/10843801_670788809707673_2126137396_a.jpg","id":"1149226354","full_name":"Jordan"},{"username":"kristinaburnett","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/l\/t51.2885-19\/11349121_722977264496938_1308727401_a.jpg","id":"710763788","full_name":"Kristina
+        Burnett"},{"username":"assiatou2","profile_picture":"http:\/\/photos-h.ak.instagram.com\/hphotos-ak-xap1\/t51.2885-19\/10831989_873220442770127_1720332566_a.jpg","id":"291891635","full_name":"Assiatou
+        Lea"},{"username":"g.letigre","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/s150x150\/12104953_114163268939591_932664066_a.jpg","id":"55526350","full_name":"Gwyneth
+        Alberetti"},{"username":"fox_mulder","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/11312135_1649357518629852_1263300749_a.jpg","id":"34871643","full_name":""},{"username":"sassy44a","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/11424689_1648989472002327_2147279009_a.jpg","id":"32729439","full_name":""},{"username":"abkerr","profile_picture":"http:\/\/photos-e.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11887097_136994796640524_488471680_a.jpg","id":"9743780","full_name":"Andrea
+        Shulski"},{"username":"jothamwb","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11887048_849043215181429_1133387827_a.jpg","id":"6678555","full_name":"jothamwb"},{"username":"mmburleson","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/s150x150\/11371011_898468863563827_475575460_a.jpg","id":"4628023","full_name":"Maggie
+        Burleson"},{"username":"heddabird","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xpa1\/t51.2885-19\/10538747_1478782922369115_1342617348_a.jpg","id":"2479834","full_name":"Hedda
+        Burnett"}]}'
+    http_version: 
+  recorded_at: Wed, 21 Oct 2015 13:37:21 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/media/1092804742133909568_509161/likes.json?access_token=509161.38c3f84.10f08b0e76634691b6740ac2420a0b11
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Instagram Ruby Gem 1.1.6
+      Authorization:
+      - Token token="509161.38c3f84.10f08b0e76634691b6740ac2420a0b11"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Ratelimit-Remaining:
+      - '4971'
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Wed, 21 Oct 2015 13:37:22 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=92ed28330f48cb736988b7427b38ff71; expires=Wed, 19-Oct-2016 13:37:22
+        GMT; Max-Age=31449600; Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '536'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"meta":{"code":200},"data":[{"username":"platinumstein","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xap1\/t51.2885-19\/11117019_1565871783701675_887270321_a.jpg","id":"222440449","full_name":"David
+        Goldstein"},{"username":"g.letigre","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/s150x150\/12104953_114163268939591_932664066_a.jpg","id":"55526350","full_name":"Gwyneth
+        Alberetti"},{"username":"abkerr","profile_picture":"http:\/\/photos-e.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11887097_136994796640524_488471680_a.jpg","id":"9743780","full_name":"Andrea
+        Shulski"},{"username":"samutne","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11875329_998778276809035_158744336_a.jpg","id":"6699689","full_name":"Sam
+        Utne"},{"username":"bschippers718","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11326268_1472786479703760_19158020_a.jpg","id":"3197943","full_name":""},{"username":"heddabird","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xpa1\/t51.2885-19\/10538747_1478782922369115_1342617348_a.jpg","id":"2479834","full_name":"Hedda
+        Burnett"},{"username":"jefficly","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xpf1\/t51.2885-19\/10919129_821356947944424_856798616_a.jpg","id":"114083","full_name":"Jeff
+        Ng"}]}'
+    http_version: 
+  recorded_at: Wed, 21 Oct 2015 13:37:22 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/media/1088790339071838853_509161/likes.json?access_token=509161.38c3f84.10f08b0e76634691b6740ac2420a0b11
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Instagram Ruby Gem 1.1.6
+      Authorization:
+      - Token token="509161.38c3f84.10f08b0e76634691b6740ac2420a0b11"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Ratelimit-Remaining:
+      - '4970'
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Wed, 21 Oct 2015 13:37:22 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=d6c64bd74252afb51adc946cb417a4c0; expires=Wed, 19-Oct-2016 13:37:22
+        GMT; Max-Age=31449600; Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1192'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"meta":{"code":200},"data":[{"username":"palfurlong","profile_picture":"http:\/\/photos-c.ak.instagram.com\/hphotos-ak-xaf1\/t51.2885-19\/s150x150\/11324916_613727365396378_1036220375_a.jpg","id":"2073738252","full_name":"Lordfurlong"},{"username":"aunt_kt","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/s150x150\/11918053_883514231698054_2133605599_a.jpg","id":"2043166396","full_name":"KathleenTRyan"},{"username":"campin_baby","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/s150x150\/11356790_281844015319145_1001932494_a.jpg","id":"2028658793","full_name":"Courtney
+        Peterson"},{"username":"sunnysettondepoortere","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xaf1\/t51.2885-19\/s150x150\/12141888_1191241597558424_1727665381_a.jpg","id":"1215137313","full_name":"Sunny
+        Setton De Poortere"},{"username":"errjordan1","profile_picture":"http:\/\/photos-b.ak.instagram.com\/hphotos-ak-xat1\/t51.2885-19\/10843801_670788809707673_2126137396_a.jpg","id":"1149226354","full_name":"Jordan"},{"username":"kristinaburnett","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/l\/t51.2885-19\/11349121_722977264496938_1308727401_a.jpg","id":"710763788","full_name":"Kristina
+        Burnett"},{"username":"supermajormusic","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11410470_1632518370367049_1096356532_a.jpg","id":"311146653","full_name":"Supermajor"},{"username":"killer_weed","profile_picture":"http:\/\/photos-g.ak.instagram.com\/hphotos-ak-xaf1\/t51.2885-19\/11820604_726404714131342_916804379_a.jpg","id":"290762989","full_name":"killer_weed"},{"username":"robotmia","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11849890_1621955321388363_1694468202_a.jpg","id":"198279018","full_name":"robotmia"},{"username":"beldenwp","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xpf1\/t51.2885-19\/1742075_830366946997066_2058490978_a.jpg","id":"176569427","full_name":"Wesley
+        Belden"},{"username":"g.letigre","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/s150x150\/12104953_114163268939591_932664066_a.jpg","id":"55526350","full_name":"Gwyneth
+        Alberetti"},{"username":"fox_mulder","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/11312135_1649357518629852_1263300749_a.jpg","id":"34871643","full_name":""},{"username":"dineshvasudevan","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/10547240_483836381797424_925871161_a.jpg","id":"34727323","full_name":"Dinesh"},{"username":"dianapittman","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfp1\/t51.2885-19\/891441_1454070734860888_1036214543_a.jpg","id":"22965186","full_name":""},{"username":"abkerr","profile_picture":"http:\/\/photos-e.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11887097_136994796640524_488471680_a.jpg","id":"9743780","full_name":"Andrea
+        Shulski"},{"username":"jothamwb","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11887048_849043215181429_1133387827_a.jpg","id":"6678555","full_name":"jothamwb"},{"username":"vaschippers","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11820658_485894324912302_92243061_a.jpg","id":"6336972","full_name":"Virginia
+        Schippers"},{"username":"bschippers718","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11326268_1472786479703760_19158020_a.jpg","id":"3197943","full_name":""},{"username":"heddabird","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xpa1\/t51.2885-19\/10538747_1478782922369115_1342617348_a.jpg","id":"2479834","full_name":"Hedda
+        Burnett"},{"username":"richwithpossibility","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/s150x150\/11809905_1477451342582463_215970865_a.jpg","id":"833163","full_name":"Rich
+        Kearney"}]}'
+    http_version: 
+  recorded_at: Wed, 21 Oct 2015 13:37:22 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/media/1088496318613097073_509161/likes.json?access_token=509161.38c3f84.10f08b0e76634691b6740ac2420a0b11
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Instagram Ruby Gem 1.1.6
+      Authorization:
+      - Token token="509161.38c3f84.10f08b0e76634691b6740ac2420a0b11"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Ratelimit-Remaining:
+      - '4969'
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Wed, 21 Oct 2015 13:37:22 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=dc8922bffc421ed0af9c8cdf24348272; expires=Wed, 19-Oct-2016 13:37:22
+        GMT; Max-Age=31449600; Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '891'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"meta":{"code":200},"data":[{"username":"wear_ulikeshop","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xpa1\/t51.2885-19\/11184542_479427878873144_102132700_a.jpg","id":"1732501614","full_name":"Your
+        Online Shop \ud83d\udd1d"},{"username":"errjordan1","profile_picture":"http:\/\/photos-b.ak.instagram.com\/hphotos-ak-xat1\/t51.2885-19\/10843801_670788809707673_2126137396_a.jpg","id":"1149226354","full_name":"Jordan"},{"username":"kristinaburnett","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/l\/t51.2885-19\/11349121_722977264496938_1308727401_a.jpg","id":"710763788","full_name":"Kristina
+        Burnett"},{"username":"assiatou2","profile_picture":"http:\/\/photos-h.ak.instagram.com\/hphotos-ak-xap1\/t51.2885-19\/10831989_873220442770127_1720332566_a.jpg","id":"291891635","full_name":"Assiatou
+        Lea"},{"username":"robotmia","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11849890_1621955321388363_1694468202_a.jpg","id":"198279018","full_name":"robotmia"},{"username":"kanzao","profile_picture":"http:\/\/photos-e.ak.instagram.com\/hphotos-ak-xap1\/t51.2885-19\/10725084_1616042051956756_968875970_a.jpg","id":"190318257","full_name":"Jonas
+        Hermansen"},{"username":"dineshvasudevan","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/10547240_483836381797424_925871161_a.jpg","id":"34727323","full_name":"Dinesh"},{"username":"dianapittman","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfp1\/t51.2885-19\/891441_1454070734860888_1036214543_a.jpg","id":"22965186","full_name":""},{"username":"28spokes","profile_picture":"http:\/\/photos-g.ak.instagram.com\/hphotos-ak-xaf1\/t51.2885-19\/11334670_866392970107574_2095082673_a.jpg","id":"15838450","full_name":"J
+        Anderson"},{"username":"abkerr","profile_picture":"http:\/\/photos-e.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11887097_136994796640524_488471680_a.jpg","id":"9743780","full_name":"Andrea
+        Shulski"},{"username":"jothamwb","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11887048_849043215181429_1133387827_a.jpg","id":"6678555","full_name":"jothamwb"},{"username":"bschippers718","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11326268_1472786479703760_19158020_a.jpg","id":"3197943","full_name":""},{"username":"heddabird","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xpa1\/t51.2885-19\/10538747_1478782922369115_1342617348_a.jpg","id":"2479834","full_name":"Hedda
+        Burnett"},{"username":"jefficly","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xpf1\/t51.2885-19\/10919129_821356947944424_856798616_a.jpg","id":"114083","full_name":"Jeff
+        Ng"}]}'
+    http_version: 
+  recorded_at: Wed, 21 Oct 2015 13:37:22 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/media/1074603685612424096_509161/likes.json?access_token=509161.38c3f84.10f08b0e76634691b6740ac2420a0b11
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Instagram Ruby Gem 1.1.6
+      Authorization:
+      - Token token="509161.38c3f84.10f08b0e76634691b6740ac2420a0b11"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Ratelimit-Remaining:
+      - '4968'
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Wed, 21 Oct 2015 13:37:23 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=b730fb8d5290e9523e425b2bb67c2892; expires=Wed, 19-Oct-2016 13:37:23
+        GMT; Max-Age=31449600; Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1362'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"meta":{"code":200},"data":[{"username":"dtpegyra43","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/s150x150\/11909372_1639276209649366_187183126_a.jpg","id":"2135174872","full_name":"Diana"},{"username":"dtabeqypino","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/s150x150\/11821871_308196735971215_899235657_a.jpg","id":"2100774877","full_name":"Amanda"},{"username":"dtyxuceq","profile_picture":"http:\/\/photos-c.ak.instagram.com\/hphotos-ak-xaf1\/t51.2885-19\/s150x150\/11909097_134445216898602_1467497150_a.jpg","id":"2035174873","full_name":"Irisha"},{"username":"dtkuqogobic","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/s150x150\/11850239_480505742132379_2104009760_a.jpg","id":"2030774874","full_name":"Maria"},{"username":"wearulike.shop","profile_picture":"http:\/\/photos-g.ak.instagram.com\/hphotos-ak-xfp1\/t51.2885-19\/928801_1402774346711654_90321180_a.jpg","id":"2018814070","full_name":"Your
+        Online Shop \ud83d\udd1d"},{"username":"dtdacidotuwyq","profile_picture":"http:\/\/photos-f.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11950622_122557974761445_602623761_a.jpg","id":"1984774875","full_name":"Alexa"},{"username":"dtzerakyluq","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11373831_490746437767368_635425474_a.jpg","id":"1943974872","full_name":"Zera"},{"username":"dtinatybek","profile_picture":"http:\/\/photos-h.ak.instagram.com\/hphotos-ak-xaf1\/t51.2885-19\/s150x150\/11918005_161362370869591_1051348437_a.jpg","id":"1933974877","full_name":"Inna"},{"username":"zygawuxu","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11312035_678486692286885_1256598626_a.jpg","id":"1921967813","full_name":"Sandra"},{"username":"rucymetohazof","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/s150x150\/11419095_891146914285965_44434548_a.jpg","id":"1908367808","full_name":"\u041e\u043a\u0441\u0430\u043d\u0430"},{"username":"kristinaburnett","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/l\/t51.2885-19\/11349121_722977264496938_1308727401_a.jpg","id":"710763788","full_name":"Kristina
+        Burnett"},{"username":"assiatou2","profile_picture":"http:\/\/photos-h.ak.instagram.com\/hphotos-ak-xap1\/t51.2885-19\/10831989_873220442770127_1720332566_a.jpg","id":"291891635","full_name":"Assiatou
+        Lea"},{"username":"b_parsiyan","profile_picture":"http:\/\/photos-d.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11336276_1695696353999035_139862320_a.jpg","id":"276541412","full_name":"Babak
+        M. Parsiyan"},{"username":"hollywoodzappa","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/s150x150\/12142214_1642250229347666_1981687941_a.jpg","id":"225667690","full_name":"Holly
+        Wood Zappa"},{"username":"beldenwp","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xpf1\/t51.2885-19\/1742075_830366946997066_2058490978_a.jpg","id":"176569427","full_name":"Wesley
+        Belden"},{"username":"g.letigre","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/s150x150\/12104953_114163268939591_932664066_a.jpg","id":"55526350","full_name":"Gwyneth
+        Alberetti"},{"username":"fox_mulder","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/11312135_1649357518629852_1263300749_a.jpg","id":"34871643","full_name":""},{"username":"dmitriiroom","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11373858_405900402954045_123449564_a.jpg","id":"29386180","full_name":"Dim
+        Room"},{"username":"dianapittman","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfp1\/t51.2885-19\/891441_1454070734860888_1036214543_a.jpg","id":"22965186","full_name":""},{"username":"jothamwb","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11887048_849043215181429_1133387827_a.jpg","id":"6678555","full_name":"jothamwb"},{"username":"mmburleson","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/s150x150\/11371011_898468863563827_475575460_a.jpg","id":"4628023","full_name":"Maggie
+        Burleson"},{"username":"bschippers718","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11326268_1472786479703760_19158020_a.jpg","id":"3197943","full_name":""},{"username":"aschip","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-ash\/t51.2885-19\/927956_236144146593687_1234332720_a.jpg","id":"3156819","full_name":"Ali"},{"username":"heddabird","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xpa1\/t51.2885-19\/10538747_1478782922369115_1342617348_a.jpg","id":"2479834","full_name":"Hedda
+        Burnett"}]}'
+    http_version: 
+  recorded_at: Wed, 21 Oct 2015 13:37:23 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/media/1070434892032051422_509161/likes.json?access_token=509161.38c3f84.10f08b0e76634691b6740ac2420a0b11
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Instagram Ruby Gem 1.1.6
+      Authorization:
+      - Token token="509161.38c3f84.10f08b0e76634691b6740ac2420a0b11"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Ratelimit-Remaining:
+      - '4967'
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Wed, 21 Oct 2015 13:37:24 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=d2284e92b8314f42e6e92e57fefdd51d; expires=Wed, 19-Oct-2016 13:37:24
+        GMT; Max-Age=31449600; Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1259'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"meta":{"code":200},"data":[{"username":"dtpegyra43","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/s150x150\/11909372_1639276209649366_187183126_a.jpg","id":"2135174872","full_name":"Diana"},{"username":"dtabeqypino","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/s150x150\/11821871_308196735971215_899235657_a.jpg","id":"2100774877","full_name":"Amanda"},{"username":"dtyxuceq","profile_picture":"http:\/\/photos-c.ak.instagram.com\/hphotos-ak-xaf1\/t51.2885-19\/s150x150\/11909097_134445216898602_1467497150_a.jpg","id":"2035174873","full_name":"Irisha"},{"username":"dtkuqogobic","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/s150x150\/11850239_480505742132379_2104009760_a.jpg","id":"2030774874","full_name":"Maria"},{"username":"dtdacidotuwyq","profile_picture":"http:\/\/photos-f.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11950622_122557974761445_602623761_a.jpg","id":"1984774875","full_name":"Alexa"},{"username":"dtzerakyluq","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11373831_490746437767368_635425474_a.jpg","id":"1943974872","full_name":"Zera"},{"username":"dtinatybek","profile_picture":"http:\/\/photos-h.ak.instagram.com\/hphotos-ak-xaf1\/t51.2885-19\/s150x150\/11918005_161362370869591_1051348437_a.jpg","id":"1933974877","full_name":"Inna"},{"username":"zygawuxu","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11312035_678486692286885_1256598626_a.jpg","id":"1921967813","full_name":"Sandra"},{"username":"rucymetohazof","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/s150x150\/11419095_891146914285965_44434548_a.jpg","id":"1908367808","full_name":"\u041e\u043a\u0441\u0430\u043d\u0430"},{"username":"sunnysettondepoortere","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xaf1\/t51.2885-19\/s150x150\/12141888_1191241597558424_1727665381_a.jpg","id":"1215137313","full_name":"Sunny
+        Setton De Poortere"},{"username":"errjordan1","profile_picture":"http:\/\/photos-b.ak.instagram.com\/hphotos-ak-xat1\/t51.2885-19\/10843801_670788809707673_2126137396_a.jpg","id":"1149226354","full_name":"Jordan"},{"username":"kristinaburnett","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/l\/t51.2885-19\/11349121_722977264496938_1308727401_a.jpg","id":"710763788","full_name":"Kristina
+        Burnett"},{"username":"robotmia","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11849890_1621955321388363_1694468202_a.jpg","id":"198279018","full_name":"robotmia"},{"username":"g.letigre","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/s150x150\/12104953_114163268939591_932664066_a.jpg","id":"55526350","full_name":"Gwyneth
+        Alberetti"},{"username":"pavanagrawal","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfp1\/t51.2885-19\/10549774_1510083429203776_1442854511_a.jpg","id":"52127389","full_name":"Pavan
+        Agrawal"},{"username":"dianapittman","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfp1\/t51.2885-19\/891441_1454070734860888_1036214543_a.jpg","id":"22965186","full_name":""},{"username":"rsreusser","profile_picture":"http:\/\/photos-g.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11363738_434376690092406_1533990018_a.jpg","id":"11616638","full_name":"rsreusser"},{"username":"jothamwb","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11887048_849043215181429_1133387827_a.jpg","id":"6678555","full_name":"jothamwb"},{"username":"vaschippers","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11820658_485894324912302_92243061_a.jpg","id":"6336972","full_name":"Virginia
+        Schippers"},{"username":"bschippers718","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11326268_1472786479703760_19158020_a.jpg","id":"3197943","full_name":""},{"username":"heddabird","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xpa1\/t51.2885-19\/10538747_1478782922369115_1342617348_a.jpg","id":"2479834","full_name":"Hedda
+        Burnett"},{"username":"richwithpossibility","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/s150x150\/11809905_1477451342582463_215970865_a.jpg","id":"833163","full_name":"Rich
+        Kearney"}]}'
+    http_version: 
+  recorded_at: Wed, 21 Oct 2015 13:37:24 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/media/1056535041355615035_509161/likes.json?access_token=509161.38c3f84.10f08b0e76634691b6740ac2420a0b11
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Instagram Ruby Gem 1.1.6
+      Authorization:
+      - Token token="509161.38c3f84.10f08b0e76634691b6740ac2420a0b11"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Ratelimit-Remaining:
+      - '4966'
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Wed, 21 Oct 2015 13:37:26 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=9b487dd8fd9bee46cfea23212653c1f6; expires=Wed, 19-Oct-2016 13:37:26
+        GMT; Max-Age=31449600; Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1439'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"meta":{"code":200},"data":[{"username":"dtpegyra43","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/s150x150\/11909372_1639276209649366_187183126_a.jpg","id":"2135174872","full_name":"Diana"},{"username":"dtabeqypino","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/s150x150\/11821871_308196735971215_899235657_a.jpg","id":"2100774877","full_name":"Amanda"},{"username":"palfurlong","profile_picture":"http:\/\/photos-c.ak.instagram.com\/hphotos-ak-xaf1\/t51.2885-19\/s150x150\/11324916_613727365396378_1036220375_a.jpg","id":"2073738252","full_name":"Lordfurlong"},{"username":"bergenrentals","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xpa1\/t51.2885-19\/s150x150\/1389236_864927283584039_312528898_a.jpg","id":"2062741440","full_name":"BergenRentalsNJ"},{"username":"dtyxuceq","profile_picture":"http:\/\/photos-c.ak.instagram.com\/hphotos-ak-xaf1\/t51.2885-19\/s150x150\/11909097_134445216898602_1467497150_a.jpg","id":"2035174873","full_name":"Irisha"},{"username":"dtkuqogobic","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/s150x150\/11850239_480505742132379_2104009760_a.jpg","id":"2030774874","full_name":"Maria"},{"username":"dtdacidotuwyq","profile_picture":"http:\/\/photos-f.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11950622_122557974761445_602623761_a.jpg","id":"1984774875","full_name":"Alexa"},{"username":"dtzerakyluq","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11373831_490746437767368_635425474_a.jpg","id":"1943974872","full_name":"Zera"},{"username":"dtinatybek","profile_picture":"http:\/\/photos-h.ak.instagram.com\/hphotos-ak-xaf1\/t51.2885-19\/s150x150\/11918005_161362370869591_1051348437_a.jpg","id":"1933974877","full_name":"Inna"},{"username":"zygawuxu","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11312035_678486692286885_1256598626_a.jpg","id":"1921967813","full_name":"Sandra"},{"username":"rucymetohazof","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/s150x150\/11419095_891146914285965_44434548_a.jpg","id":"1908367808","full_name":"\u041e\u043a\u0441\u0430\u043d\u0430"},{"username":"elisabeth_sdgfgre","profile_picture":"http:\/\/photos-g.ak.instagram.com\/hphotos-ak-xaf1\/t51.2885-19\/s150x150\/11375400_124008484613862_121564144_a.jpg","id":"1696744046","full_name":""},{"username":"sunnysettondepoortere","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xaf1\/t51.2885-19\/s150x150\/12141888_1191241597558424_1727665381_a.jpg","id":"1215137313","full_name":"Sunny
+        Setton De Poortere"},{"username":"kristinaburnett","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/l\/t51.2885-19\/11349121_722977264496938_1308727401_a.jpg","id":"710763788","full_name":"Kristina
+        Burnett"},{"username":"mellis999","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/11429243_1466262500343854_39946213_a.jpg","id":"421644215","full_name":"\u30de\u30c3\u30c8\u30fb\u30a8\u30ea\u30b9"},{"username":"lclowrey","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xpf1\/t51.2885-19\/10534967_572427022892797_1974203839_a.jpg","id":"313351655","full_name":"Lisa
+        Campofranco Lowrey"},{"username":"assiatou2","profile_picture":"http:\/\/photos-h.ak.instagram.com\/hphotos-ak-xap1\/t51.2885-19\/10831989_873220442770127_1720332566_a.jpg","id":"291891635","full_name":"Assiatou
+        Lea"},{"username":"platinumstein","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xap1\/t51.2885-19\/11117019_1565871783701675_887270321_a.jpg","id":"222440449","full_name":"David
+        Goldstein"},{"username":"robotmia","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11849890_1621955321388363_1694468202_a.jpg","id":"198279018","full_name":"robotmia"},{"username":"annikanisser","profile_picture":"http:\/\/photos-g.ak.instagram.com\/hphotos-ak-xpa1\/t51.2885-19\/10932530_1123963320964886_1385850012_a.jpg","id":"190837037","full_name":""},{"username":"g.letigre","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/s150x150\/12104953_114163268939591_932664066_a.jpg","id":"55526350","full_name":"Gwyneth
+        Alberetti"},{"username":"28spokes","profile_picture":"http:\/\/photos-g.ak.instagram.com\/hphotos-ak-xaf1\/t51.2885-19\/11334670_866392970107574_2095082673_a.jpg","id":"15838450","full_name":"J
+        Anderson"},{"username":"rsreusser","profile_picture":"http:\/\/photos-g.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11363738_434376690092406_1533990018_a.jpg","id":"11616638","full_name":"rsreusser"},{"username":"jothamwb","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11887048_849043215181429_1133387827_a.jpg","id":"6678555","full_name":"jothamwb"},{"username":"bschippers718","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11326268_1472786479703760_19158020_a.jpg","id":"3197943","full_name":""}]}'
+    http_version: 
+  recorded_at: Wed, 21 Oct 2015 13:37:26 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/media/1042258220644633063_509161/likes.json?access_token=509161.38c3f84.10f08b0e76634691b6740ac2420a0b11
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Instagram Ruby Gem 1.1.6
+      Authorization:
+      - Token token="509161.38c3f84.10f08b0e76634691b6740ac2420a0b11"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Ratelimit-Remaining:
+      - '4965'
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Wed, 21 Oct 2015 13:37:26 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=ecc9a2d54cfd3a2ea9baca760a639491; expires=Wed, 19-Oct-2016 13:37:26
+        GMT; Max-Age=31449600; Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1017'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"meta":{"code":200},"data":[{"username":"dtpegyra43","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/s150x150\/11909372_1639276209649366_187183126_a.jpg","id":"2135174872","full_name":"Diana"},{"username":"palfurlong","profile_picture":"http:\/\/photos-c.ak.instagram.com\/hphotos-ak-xaf1\/t51.2885-19\/s150x150\/11324916_613727365396378_1036220375_a.jpg","id":"2073738252","full_name":"Lordfurlong"},{"username":"dtkuqogobic","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/s150x150\/11850239_480505742132379_2104009760_a.jpg","id":"2030774874","full_name":"Maria"},{"username":"dtdacidotuwyq","profile_picture":"http:\/\/photos-f.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11950622_122557974761445_602623761_a.jpg","id":"1984774875","full_name":"Alexa"},{"username":"rucymetohazof","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/s150x150\/11419095_891146914285965_44434548_a.jpg","id":"1908367808","full_name":"\u041e\u043a\u0441\u0430\u043d\u0430"},{"username":"errjordan1","profile_picture":"http:\/\/photos-b.ak.instagram.com\/hphotos-ak-xat1\/t51.2885-19\/10843801_670788809707673_2126137396_a.jpg","id":"1149226354","full_name":"Jordan"},{"username":"kristinaburnett","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/l\/t51.2885-19\/11349121_722977264496938_1308727401_a.jpg","id":"710763788","full_name":"Kristina
+        Burnett"},{"username":"assiatou2","profile_picture":"http:\/\/photos-h.ak.instagram.com\/hphotos-ak-xap1\/t51.2885-19\/10831989_873220442770127_1720332566_a.jpg","id":"291891635","full_name":"Assiatou
+        Lea"},{"username":"bobocollective","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xpa1\/t51.2885-19\/10864670_1745113312380976_963206857_a.jpg","id":"181272372","full_name":"jenny
+        seeche"},{"username":"benstraw","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/11821055_1162819990410706_767819932_a.jpg","id":"34606275","full_name":"Ben
+        Strawbridge"},{"username":"rsreusser","profile_picture":"http:\/\/photos-g.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11363738_434376690092406_1533990018_a.jpg","id":"11616638","full_name":"rsreusser"},{"username":"jothamwb","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11887048_849043215181429_1133387827_a.jpg","id":"6678555","full_name":"jothamwb"},{"username":"vaschippers","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11820658_485894324912302_92243061_a.jpg","id":"6336972","full_name":"Virginia
+        Schippers"},{"username":"kimberbop","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xaf1\/t51.2885-19\/11282784_1633821200217920_66341763_a.jpg","id":"4019071","full_name":"K
+        I M \ubc8c Y  C H \uc560 N G"},{"username":"bschippers718","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11326268_1472786479703760_19158020_a.jpg","id":"3197943","full_name":""},{"username":"heddabird","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xpa1\/t51.2885-19\/10538747_1478782922369115_1342617348_a.jpg","id":"2479834","full_name":"Hedda
+        Burnett"}]}'
+    http_version: 
+  recorded_at: Wed, 21 Oct 2015 13:37:26 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/media/1031918944715344278_509161/likes.json?access_token=509161.38c3f84.10f08b0e76634691b6740ac2420a0b11
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Instagram Ruby Gem 1.1.6
+      Authorization:
+      - Token token="509161.38c3f84.10f08b0e76634691b6740ac2420a0b11"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Ratelimit-Remaining:
+      - '4964'
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Wed, 21 Oct 2015 13:37:26 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=6825d956e18cf06419c5bd1cf6d6df7b; expires=Wed, 19-Oct-2016 13:37:26
+        GMT; Max-Age=31449600; Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '678'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"meta":{"code":200},"data":[{"username":"dtpegyra43","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/s150x150\/11909372_1639276209649366_187183126_a.jpg","id":"2135174872","full_name":"Diana"},{"username":"dtkuqogobic","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/s150x150\/11850239_480505742132379_2104009760_a.jpg","id":"2030774874","full_name":"Maria"},{"username":"dtdacidotuwyq","profile_picture":"http:\/\/photos-f.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11950622_122557974761445_602623761_a.jpg","id":"1984774875","full_name":"Alexa"},{"username":"rucymetohazof","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/s150x150\/11419095_891146914285965_44434548_a.jpg","id":"1908367808","full_name":"\u041e\u043a\u0441\u0430\u043d\u0430"},{"username":"kristinaburnett","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/l\/t51.2885-19\/11349121_722977264496938_1308727401_a.jpg","id":"710763788","full_name":"Kristina
+        Burnett"},{"username":"assiatou2","profile_picture":"http:\/\/photos-h.ak.instagram.com\/hphotos-ak-xap1\/t51.2885-19\/10831989_873220442770127_1720332566_a.jpg","id":"291891635","full_name":"Assiatou
+        Lea"},{"username":"fox_mulder","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/11312135_1649357518629852_1263300749_a.jpg","id":"34871643","full_name":""},{"username":"rsreusser","profile_picture":"http:\/\/photos-g.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11363738_434376690092406_1533990018_a.jpg","id":"11616638","full_name":"rsreusser"},{"username":"jothamwb","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11887048_849043215181429_1133387827_a.jpg","id":"6678555","full_name":"jothamwb"},{"username":"jesseresnick","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11333403_694389467358997_907186103_a.jpg","id":"3151236","full_name":"Jesse
+        Resnick"}]}'
+    http_version: 
+  recorded_at: Wed, 21 Oct 2015 13:37:26 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/media/1031434299850689210_509161/likes.json?access_token=509161.38c3f84.10f08b0e76634691b6740ac2420a0b11
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Instagram Ruby Gem 1.1.6
+      Authorization:
+      - Token token="509161.38c3f84.10f08b0e76634691b6740ac2420a0b11"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Ratelimit-Remaining:
+      - '4963'
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Wed, 21 Oct 2015 13:37:26 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=878a234940742bcd69fc2a5c0eaf69f5; expires=Wed, 19-Oct-2016 13:37:26
+        GMT; Max-Age=31449600; Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '806'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"meta":{"code":200},"data":[{"username":"eric_arborist","profile_picture":"http:\/\/photos-d.ak.instagram.com\/hphotos-ak-xpf1\/t51.2885-19\/10544261_310069355838555_629074723_a.jpg","id":"830175832","full_name":"Eric
+        v\/d Veen | Autorijschool."},{"username":"kristinaburnett","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/l\/t51.2885-19\/11349121_722977264496938_1308727401_a.jpg","id":"710763788","full_name":"Kristina
+        Burnett"},{"username":"assiatou2","profile_picture":"http:\/\/photos-h.ak.instagram.com\/hphotos-ak-xap1\/t51.2885-19\/10831989_873220442770127_1720332566_a.jpg","id":"291891635","full_name":"Assiatou
+        Lea"},{"username":"hollywoodzappa","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/s150x150\/12142214_1642250229347666_1981687941_a.jpg","id":"225667690","full_name":"Holly
+        Wood Zappa"},{"username":"kanzao","profile_picture":"http:\/\/photos-e.ak.instagram.com\/hphotos-ak-xap1\/t51.2885-19\/10725084_1616042051956756_968875970_a.jpg","id":"190318257","full_name":"Jonas
+        Hermansen"},{"username":"fox_mulder","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/11312135_1649357518629852_1263300749_a.jpg","id":"34871643","full_name":""},{"username":"rsreusser","profile_picture":"http:\/\/photos-g.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11363738_434376690092406_1533990018_a.jpg","id":"11616638","full_name":"rsreusser"},{"username":"resnicow","profile_picture":"http:\/\/photos-g.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11358269_1661177694114342_931554266_a.jpg","id":"7691781","full_name":"Joel
+        Resnicow"},{"username":"jothamwb","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11887048_849043215181429_1133387827_a.jpg","id":"6678555","full_name":"jothamwb"},{"username":"mmburleson","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/s150x150\/11371011_898468863563827_475575460_a.jpg","id":"4628023","full_name":"Maggie
+        Burleson"},{"username":"bschippers718","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11326268_1472786479703760_19158020_a.jpg","id":"3197943","full_name":""},{"username":"jefficly","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xpf1\/t51.2885-19\/10919129_821356947944424_856798616_a.jpg","id":"114083","full_name":"Jeff
+        Ng"}]}'
+    http_version: 
+  recorded_at: Wed, 21 Oct 2015 13:37:26 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/media/1018058615405217926_509161/likes.json?access_token=509161.38c3f84.10f08b0e76634691b6740ac2420a0b11
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Instagram Ruby Gem 1.1.6
+      Authorization:
+      - Token token="509161.38c3f84.10f08b0e76634691b6740ac2420a0b11"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Ratelimit-Remaining:
+      - '4962'
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Wed, 21 Oct 2015 13:37:27 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=479605681eeb32cde7f46d62151130b6; expires=Wed, 19-Oct-2016 13:37:27
+        GMT; Max-Age=31449600; Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '427'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"meta":{"code":200},"data":[{"username":"shock_design","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xpf1\/t51.2885-19\/10369559_723288924394791_419588153_a.jpg","id":"32132958","full_name":"Walter
+        Shock"},{"username":"jothamwb","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11887048_849043215181429_1133387827_a.jpg","id":"6678555","full_name":"jothamwb"},{"username":"mmburleson","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/s150x150\/11371011_898468863563827_475575460_a.jpg","id":"4628023","full_name":"Maggie
+        Burleson"},{"username":"bschippers718","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11326268_1472786479703760_19158020_a.jpg","id":"3197943","full_name":""},{"username":"heddabird","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xpa1\/t51.2885-19\/10538747_1478782922369115_1342617348_a.jpg","id":"2479834","full_name":"Hedda
+        Burnett"}]}'
+    http_version: 
+  recorded_at: Wed, 21 Oct 2015 13:37:27 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/media/1016794744338057386_509161/likes.json?access_token=509161.38c3f84.10f08b0e76634691b6740ac2420a0b11
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Instagram Ruby Gem 1.1.6
+      Authorization:
+      - Token token="509161.38c3f84.10f08b0e76634691b6740ac2420a0b11"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Ratelimit-Remaining:
+      - '4961'
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Wed, 21 Oct 2015 13:37:27 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=e01d03a8104c61d24af5eb209f1e232e; expires=Wed, 19-Oct-2016 13:37:27
+        GMT; Max-Age=31449600; Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '683'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"meta":{"code":200},"data":[{"username":"kristinaburnett","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/l\/t51.2885-19\/11349121_722977264496938_1308727401_a.jpg","id":"710763788","full_name":"Kristina
+        Burnett"},{"username":"assiatou2","profile_picture":"http:\/\/photos-h.ak.instagram.com\/hphotos-ak-xap1\/t51.2885-19\/10831989_873220442770127_1720332566_a.jpg","id":"291891635","full_name":"Assiatou
+        Lea"},{"username":"muzzaisa","profile_picture":"http:\/\/photos-c.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11809949_1478289609136850_251094881_a.jpg","id":"216322429","full_name":"Isabella"},{"username":"dianapittman","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfp1\/t51.2885-19\/891441_1454070734860888_1036214543_a.jpg","id":"22965186","full_name":""},{"username":"lindsertorte","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11909380_793128010786607_1533828642_a.jpg","id":"20415200","full_name":"Lindsay
+        Foehrenbach"},{"username":"jothamwb","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11887048_849043215181429_1133387827_a.jpg","id":"6678555","full_name":"jothamwb"},{"username":"clairemazur","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/11248100_1483814685267111_1654561392_a.jpg","id":"5379725","full_name":"Claire
+        Mazur"},{"username":"mmburleson","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/s150x150\/11371011_898468863563827_475575460_a.jpg","id":"4628023","full_name":"Maggie
+        Burleson"},{"username":"bschippers718","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11326268_1472786479703760_19158020_a.jpg","id":"3197943","full_name":""},{"username":"heddabird","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xpa1\/t51.2885-19\/10538747_1478782922369115_1342617348_a.jpg","id":"2479834","full_name":"Hedda
+        Burnett"}]}'
+    http_version: 
+  recorded_at: Wed, 21 Oct 2015 13:37:27 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/media/1014411656500939684_509161/likes.json?access_token=509161.38c3f84.10f08b0e76634691b6740ac2420a0b11
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Instagram Ruby Gem 1.1.6
+      Authorization:
+      - Token token="509161.38c3f84.10f08b0e76634691b6740ac2420a0b11"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Ratelimit-Remaining:
+      - '4960'
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Wed, 21 Oct 2015 13:37:28 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=bb1d4ccd94d035cfb3ba21e3de5e148d; expires=Wed, 19-Oct-2016 13:37:28
+        GMT; Max-Age=31449600; Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '844'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"meta":{"code":200},"data":[{"username":"sunnysettondepoortere","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xaf1\/t51.2885-19\/s150x150\/12141888_1191241597558424_1727665381_a.jpg","id":"1215137313","full_name":"Sunny
+        Setton De Poortere"},{"username":"errjordan1","profile_picture":"http:\/\/photos-b.ak.instagram.com\/hphotos-ak-xat1\/t51.2885-19\/10843801_670788809707673_2126137396_a.jpg","id":"1149226354","full_name":"Jordan"},{"username":"kristinaburnett","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/l\/t51.2885-19\/11349121_722977264496938_1308727401_a.jpg","id":"710763788","full_name":"Kristina
+        Burnett"},{"username":"assiatou2","profile_picture":"http:\/\/photos-h.ak.instagram.com\/hphotos-ak-xap1\/t51.2885-19\/10831989_873220442770127_1720332566_a.jpg","id":"291891635","full_name":"Assiatou
+        Lea"},{"username":"hollywoodzappa","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/s150x150\/12142214_1642250229347666_1981687941_a.jpg","id":"225667690","full_name":"Holly
+        Wood Zappa"},{"username":"mroganovic","profile_picture":"http:\/\/photos-f.ak.instagram.com\/hphotos-ak-xaf1\/t51.2885-19\/11809804_873916799353837_1180181931_a.jpg","id":"206145007","full_name":""},{"username":"robotmia","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11849890_1621955321388363_1694468202_a.jpg","id":"198279018","full_name":"robotmia"},{"username":"g.letigre","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/s150x150\/12104953_114163268939591_932664066_a.jpg","id":"55526350","full_name":"Gwyneth
+        Alberetti"},{"username":"fox_mulder","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/11312135_1649357518629852_1263300749_a.jpg","id":"34871643","full_name":""},{"username":"dianapittman","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfp1\/t51.2885-19\/891441_1454070734860888_1036214543_a.jpg","id":"22965186","full_name":""},{"username":"jothamwb","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11887048_849043215181429_1133387827_a.jpg","id":"6678555","full_name":"jothamwb"},{"username":"jesseresnick","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11333403_694389467358997_907186103_a.jpg","id":"3151236","full_name":"Jesse
+        Resnick"},{"username":"heddabird","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xpa1\/t51.2885-19\/10538747_1478782922369115_1342617348_a.jpg","id":"2479834","full_name":"Hedda
+        Burnett"}]}'
+    http_version: 
+  recorded_at: Wed, 21 Oct 2015 13:37:28 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/media/1010443231994906976_509161/likes.json?access_token=509161.38c3f84.10f08b0e76634691b6740ac2420a0b11
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Instagram Ruby Gem 1.1.6
+      Authorization:
+      - Token token="509161.38c3f84.10f08b0e76634691b6740ac2420a0b11"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Ratelimit-Remaining:
+      - '4959'
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Wed, 21 Oct 2015 13:37:30 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=a44acaf1f562aa1fdd0736ac5d45d5c0; expires=Wed, 19-Oct-2016 13:37:30
+        GMT; Max-Age=31449600; Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '864'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"meta":{"code":200},"data":[{"username":"kristinaburnett","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/l\/t51.2885-19\/11349121_722977264496938_1308727401_a.jpg","id":"710763788","full_name":"Kristina
+        Burnett"},{"username":"kohr4","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xpf1\/t51.2885-19\/10723697_1548348402063862_1030063093_a.jpg","id":"274969823","full_name":"Kyle
+        Kohr"},{"username":"hollywoodzappa","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/s150x150\/12142214_1642250229347666_1981687941_a.jpg","id":"225667690","full_name":"Holly
+        Wood Zappa"},{"username":"muzzaisa","profile_picture":"http:\/\/photos-c.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11809949_1478289609136850_251094881_a.jpg","id":"216322429","full_name":"Isabella"},{"username":"mroganovic","profile_picture":"http:\/\/photos-f.ak.instagram.com\/hphotos-ak-xaf1\/t51.2885-19\/11809804_873916799353837_1180181931_a.jpg","id":"206145007","full_name":""},{"username":"serenareisner","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/s150x150\/10731967_537351296406163_1971579269_a.jpg","id":"50107042","full_name":""},{"username":"raysrashmi","profile_picture":"http:\/\/photos-h.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/10853026_596484650480719_1357074861_a.jpg","id":"35216382","full_name":"Hello
+        Rays"},{"username":"dineshvasudevan","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/10547240_483836381797424_925871161_a.jpg","id":"34727323","full_name":"Dinesh"},{"username":"plusign","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11849040_1456427751328164_513763739_a.jpg","id":"26775638","full_name":"Joseph
+        Plus"},{"username":"dianapittman","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfp1\/t51.2885-19\/891441_1454070734860888_1036214543_a.jpg","id":"22965186","full_name":""},{"username":"jothamwb","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11887048_849043215181429_1133387827_a.jpg","id":"6678555","full_name":"jothamwb"},{"username":"jesseresnick","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11333403_694389467358997_907186103_a.jpg","id":"3151236","full_name":"Jesse
+        Resnick"},{"username":"heddabird","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xpa1\/t51.2885-19\/10538747_1478782922369115_1342617348_a.jpg","id":"2479834","full_name":"Hedda
+        Burnett"},{"username":"jefficly","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xpf1\/t51.2885-19\/10919129_821356947944424_856798616_a.jpg","id":"114083","full_name":"Jeff
+        Ng"}]}'
+    http_version: 
+  recorded_at: Wed, 21 Oct 2015 13:37:30 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/media/1009627776803735858_509161/likes.json?access_token=509161.38c3f84.10f08b0e76634691b6740ac2420a0b11
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Instagram Ruby Gem 1.1.6
+      Authorization:
+      - Token token="509161.38c3f84.10f08b0e76634691b6740ac2420a0b11"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Ratelimit-Remaining:
+      - '4958'
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Wed, 21 Oct 2015 13:37:31 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=581db03f3d16d80f35b672d88fcb1b03; expires=Wed, 19-Oct-2016 13:37:31
+        GMT; Max-Age=31449600; Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '690'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"meta":{"code":200},"data":[{"username":"titaknepper","profile_picture":"http:\/\/photos-c.ak.instagram.com\/hphotos-ak-xfp1\/t51.2885-19\/11008158_395847017262362_339485797_a.jpg","id":"350527995","full_name":"Tita
+        Estrellita-Knepper"},{"username":"hollywoodzappa","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/s150x150\/12142214_1642250229347666_1981687941_a.jpg","id":"225667690","full_name":"Holly
+        Wood Zappa"},{"username":"lschoone","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xaf1\/t51.2885-19\/11311609_1481942648784128_358367091_a.jpg","id":"201184611","full_name":"lschoone"},{"username":"robotmia","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11849890_1621955321388363_1694468202_a.jpg","id":"198279018","full_name":"robotmia"},{"username":"g.letigre","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/s150x150\/12104953_114163268939591_932664066_a.jpg","id":"55526350","full_name":"Gwyneth
+        Alberetti"},{"username":"dineshvasudevan","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/10547240_483836381797424_925871161_a.jpg","id":"34727323","full_name":"Dinesh"},{"username":"bschippers718","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11326268_1472786479703760_19158020_a.jpg","id":"3197943","full_name":""},{"username":"aschip","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-ash\/t51.2885-19\/927956_236144146593687_1234332720_a.jpg","id":"3156819","full_name":"Ali"},{"username":"jesseresnick","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11333403_694389467358997_907186103_a.jpg","id":"3151236","full_name":"Jesse
+        Resnick"},{"username":"heddabird","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xpa1\/t51.2885-19\/10538747_1478782922369115_1342617348_a.jpg","id":"2479834","full_name":"Hedda
+        Burnett"}]}'
+    http_version: 
+  recorded_at: Wed, 21 Oct 2015 13:37:31 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/media/1009501271494822634_509161/likes.json?access_token=509161.38c3f84.10f08b0e76634691b6740ac2420a0b11
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Instagram Ruby Gem 1.1.6
+      Authorization:
+      - Token token="509161.38c3f84.10f08b0e76634691b6740ac2420a0b11"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Ratelimit-Remaining:
+      - '4957'
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Wed, 21 Oct 2015 13:37:31 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=d0b83fd204f8a83494f2fc77585b0892; expires=Wed, 19-Oct-2016 13:37:31
+        GMT; Max-Age=31449600; Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '743'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"meta":{"code":200},"data":[{"username":"kristinaburnett","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/l\/t51.2885-19\/11349121_722977264496938_1308727401_a.jpg","id":"710763788","full_name":"Kristina
+        Burnett"},{"username":"hollywoodzappa","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/s150x150\/12142214_1642250229347666_1981687941_a.jpg","id":"225667690","full_name":"Holly
+        Wood Zappa"},{"username":"annikanisser","profile_picture":"http:\/\/photos-g.ak.instagram.com\/hphotos-ak-xpa1\/t51.2885-19\/10932530_1123963320964886_1385850012_a.jpg","id":"190837037","full_name":""},{"username":"kanzao","profile_picture":"http:\/\/photos-e.ak.instagram.com\/hphotos-ak-xap1\/t51.2885-19\/10725084_1616042051956756_968875970_a.jpg","id":"190318257","full_name":"Jonas
+        Hermansen"},{"username":"g.letigre","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/s150x150\/12104953_114163268939591_932664066_a.jpg","id":"55526350","full_name":"Gwyneth
+        Alberetti"},{"username":"dineshvasudevan","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/10547240_483836381797424_925871161_a.jpg","id":"34727323","full_name":"Dinesh"},{"username":"dianapittman","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfp1\/t51.2885-19\/891441_1454070734860888_1036214543_a.jpg","id":"22965186","full_name":""},{"username":"arunagw","profile_picture":"http:\/\/photos-c.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11363867_1687143228167186_1650690353_a.jpg","id":"16475700","full_name":"Arun
+        Agrawal"},{"username":"jothamwb","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11887048_849043215181429_1133387827_a.jpg","id":"6678555","full_name":"jothamwb"},{"username":"bschippers718","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11326268_1472786479703760_19158020_a.jpg","id":"3197943","full_name":""},{"username":"heddabird","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xpa1\/t51.2885-19\/10538747_1478782922369115_1342617348_a.jpg","id":"2479834","full_name":"Hedda
+        Burnett"}]}'
+    http_version: 
+  recorded_at: Wed, 21 Oct 2015 13:37:31 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/media/1008669025489717410_509161/likes.json?access_token=509161.38c3f84.10f08b0e76634691b6740ac2420a0b11
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Instagram Ruby Gem 1.1.6
+      Authorization:
+      - Token token="509161.38c3f84.10f08b0e76634691b6740ac2420a0b11"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Ratelimit-Remaining:
+      - '4956'
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Wed, 21 Oct 2015 13:37:31 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=5c24ebe337e204c30aeea5bf25dd7ee0; expires=Wed, 19-Oct-2016 13:37:31
+        GMT; Max-Age=31449600; Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '913'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"meta":{"code":200},"data":[{"username":"sunnysettondepoortere","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xaf1\/t51.2885-19\/s150x150\/12141888_1191241597558424_1727665381_a.jpg","id":"1215137313","full_name":"Sunny
+        Setton De Poortere"},{"username":"kristinaburnett","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/l\/t51.2885-19\/11349121_722977264496938_1308727401_a.jpg","id":"710763788","full_name":"Kristina
+        Burnett"},{"username":"lclowrey","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xpf1\/t51.2885-19\/10534967_572427022892797_1974203839_a.jpg","id":"313351655","full_name":"Lisa
+        Campofranco Lowrey"},{"username":"assiatou2","profile_picture":"http:\/\/photos-h.ak.instagram.com\/hphotos-ak-xap1\/t51.2885-19\/10831989_873220442770127_1720332566_a.jpg","id":"291891635","full_name":"Assiatou
+        Lea"},{"username":"mandibearsch","profile_picture":"http:\/\/photos-c.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11820503_576817679123746_624524328_a.jpg","id":"255744274","full_name":"Mandi
+        Bearsch"},{"username":"hollywoodzappa","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/s150x150\/12142214_1642250229347666_1981687941_a.jpg","id":"225667690","full_name":"Holly
+        Wood Zappa"},{"username":"muzzaisa","profile_picture":"http:\/\/photos-c.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11809949_1478289609136850_251094881_a.jpg","id":"216322429","full_name":"Isabella"},{"username":"robotmia","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11849890_1621955321388363_1694468202_a.jpg","id":"198279018","full_name":"robotmia"},{"username":"g.letigre","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/s150x150\/12104953_114163268939591_932664066_a.jpg","id":"55526350","full_name":"Gwyneth
+        Alberetti"},{"username":"fox_mulder","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/11312135_1649357518629852_1263300749_a.jpg","id":"34871643","full_name":""},{"username":"jkwonza","profile_picture":"http:\/\/photos-e.ak.instagram.com\/hphotos-ak-xaf1\/t51.2885-19\/11358253_1458620631114892_435266408_a.jpg","id":"18927901","full_name":"Oh
+        Channy"},{"username":"jothamwb","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11887048_849043215181429_1133387827_a.jpg","id":"6678555","full_name":"jothamwb"},{"username":"bschippers718","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11326268_1472786479703760_19158020_a.jpg","id":"3197943","full_name":""},{"username":"heddabird","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xpa1\/t51.2885-19\/10538747_1478782922369115_1342617348_a.jpg","id":"2479834","full_name":"Hedda
+        Burnett"}]}'
+    http_version: 
+  recorded_at: Wed, 21 Oct 2015 13:37:31 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/media/1006462272089950592_509161/likes.json?access_token=509161.38c3f84.10f08b0e76634691b6740ac2420a0b11
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Instagram Ruby Gem 1.1.6
+      Authorization:
+      - Token token="509161.38c3f84.10f08b0e76634691b6740ac2420a0b11"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Ratelimit-Remaining:
+      - '4955'
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Wed, 21 Oct 2015 13:37:31 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=ff60aa8f4620bbeaea9a8e8b10f89552; expires=Wed, 19-Oct-2016 13:37:31
+        GMT; Max-Age=31449600; Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '954'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"meta":{"code":200},"data":[{"username":"sunnysettondepoortere","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xaf1\/t51.2885-19\/s150x150\/12141888_1191241597558424_1727665381_a.jpg","id":"1215137313","full_name":"Sunny
+        Setton De Poortere"},{"username":"kristinaburnett","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/l\/t51.2885-19\/11349121_722977264496938_1308727401_a.jpg","id":"710763788","full_name":"Kristina
+        Burnett"},{"username":"lclowrey","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xpf1\/t51.2885-19\/10534967_572427022892797_1974203839_a.jpg","id":"313351655","full_name":"Lisa
+        Campofranco Lowrey"},{"username":"mandibearsch","profile_picture":"http:\/\/photos-c.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11820503_576817679123746_624524328_a.jpg","id":"255744274","full_name":"Mandi
+        Bearsch"},{"username":"robotmia","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11849890_1621955321388363_1694468202_a.jpg","id":"198279018","full_name":"robotmia"},{"username":"g.letigre","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/s150x150\/12104953_114163268939591_932664066_a.jpg","id":"55526350","full_name":"Gwyneth
+        Alberetti"},{"username":"raysrashmi","profile_picture":"http:\/\/photos-h.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/10853026_596484650480719_1357074861_a.jpg","id":"35216382","full_name":"Hello
+        Rays"},{"username":"fox_mulder","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/11312135_1649357518629852_1263300749_a.jpg","id":"34871643","full_name":""},{"username":"sassy44a","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfa1\/t51.2885-19\/11424689_1648989472002327_2147279009_a.jpg","id":"32729439","full_name":""},{"username":"shock_design","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xpf1\/t51.2885-19\/10369559_723288924394791_419588153_a.jpg","id":"32132958","full_name":"Walter
+        Shock"},{"username":"dianapittman","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xfp1\/t51.2885-19\/891441_1454070734860888_1036214543_a.jpg","id":"22965186","full_name":""},{"username":"mmburleson","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/s150x150\/11371011_898468863563827_475575460_a.jpg","id":"4628023","full_name":"Maggie
+        Burleson"},{"username":"stevenen","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11347887_695425340562132_150668853_a.jpg","id":"3340329","full_name":"Stevenen\ue50f"},{"username":"heddabird","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xpa1\/t51.2885-19\/10538747_1478782922369115_1342617348_a.jpg","id":"2479834","full_name":"Hedda
+        Burnett"},{"username":"larrylegend","profile_picture":"http:\/\/photos-b.ak.instagram.com\/hphotos-ak-xaf1\/t51.2885-19\/11348316_1449468315361529_885616817_a.jpg","id":"195033","full_name":"Larry
+        Legend"}]}'
+    http_version: 
+  recorded_at: Wed, 21 Oct 2015 13:37:31 GMT
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/media/1003690279569525040_509161/likes.json?access_token=509161.38c3f84.10f08b0e76634691b6740ac2420a0b11
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Instagram Ruby Gem 1.1.6
+      Authorization:
+      - Token token="509161.38c3f84.10f08b0e76634691b6740ac2420a0b11"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Ratelimit-Remaining:
+      - '4954'
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '5000'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Wed, 21 Oct 2015 13:37:32 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=6f38703bbd00c2b9863d0c7448de0475; expires=Wed, 19-Oct-2016 13:37:32
+        GMT; Max-Age=31449600; Path=/
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '418'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"meta":{"code":200},"data":[{"username":"assiatou2","profile_picture":"http:\/\/photos-h.ak.instagram.com\/hphotos-ak-xap1\/t51.2885-19\/10831989_873220442770127_1720332566_a.jpg","id":"291891635","full_name":"Assiatou
+        Lea"},{"username":"typingmonkette","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xaf1\/t51.2885-19\/11333716_882120895189528_1102832628_a.jpg","id":"10162618","full_name":"dig"},{"username":"jothamwb","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xaf1\/t51.2885-19\/11887048_849043215181429_1133387827_a.jpg","id":"6678555","full_name":"jothamwb"},{"username":"bschippers718","profile_picture":"http:\/\/photos-a.ak.instagram.com\/hphotos-ak-xfa1\/t51.2885-19\/11326268_1472786479703760_19158020_a.jpg","id":"3197943","full_name":""},{"username":"heddabird","profile_picture":"http:\/\/scontent.cdninstagram.com\/hphotos-xpa1\/t51.2885-19\/10538747_1478782922369115_1342617348_a.jpg","id":"2479834","full_name":"Hedda
+        Burnett"}]}'
+    http_version: 
+  recorded_at: Wed, 21 Oct 2015 13:37:32 GMT
 recorded_with: VCR 2.9.3

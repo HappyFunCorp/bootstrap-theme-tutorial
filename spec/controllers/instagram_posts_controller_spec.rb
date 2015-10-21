@@ -18,9 +18,6 @@ require 'rails_helper'
 # Message expectations are only used when there is no simpler way to specify
 # that an instance is receiving a specific message.
 
-ACCESS_TOKEN='509161.38c3f84.7d662d3ec84347f99b9574ef10168de1'
-
-
 RSpec.describe InstagramPostsController, type: :controller do
 
   # This should return the minimal set of attributes required to create a valid

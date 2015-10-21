@@ -1,5 +1,11 @@
 require 'rails_helper'
 
+Crush
+class Crush
+  def make_image
+  end
+end
+
 RSpec.describe Crush, type: :model do
   let( :user ) { create( :ig_user ) }
   let( :wschenk ) { create( :instagram_user, user: user, username: "wschenk", full_name: "Will") }

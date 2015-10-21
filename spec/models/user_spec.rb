@@ -1,7 +1,5 @@
 require 'rails_helper'
 
-ACCESS_TOKEN='509161.38c3f84.7d662d3ec84347f99b9574ef10168de1'
-
 RSpec.describe User, type: :model do
   describe "staleness" do
     it "should be stale if never synced" do
