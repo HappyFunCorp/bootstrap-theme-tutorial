@@ -54,7 +54,7 @@ RSpec.configure do |config|
 
   config.include Devise::TestHelpers, type: :controller
   config.include Warden::Test::Helpers, type: :feature
-
+  config.include ActiveJob::TestHelper
 end
 
 VCR.configure do |c|
