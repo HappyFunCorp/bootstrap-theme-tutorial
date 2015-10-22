@@ -28,7 +28,7 @@ module Ic
       g.scaffold_controller "scaffold_controller"
     end
 
-    config.active_job.queue_adapter = :delayed_job
+    config.active_job.queue_adapter = :sidekiq
   end
 
 end
