@@ -42,6 +42,7 @@
   :javascript
     $(function() {
       $("#facebook_link").click( function() {
+        ga('send', 'event', 'Facebook', 'share', '#{@crush.crush_user}' );
         ga('send', 'social', 'facebook', 'share', window.location.href );
       })
     })
