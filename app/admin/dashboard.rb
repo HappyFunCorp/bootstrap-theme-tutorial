@@ -23,6 +23,19 @@ ActiveAdmin.register_page "Dashboard" do
         end
       end
     end
+
+    columns do
+      column do
+        panel "Likes" do
+          render partial: "admin/chart", locals: { scope: 'likes' }
+        end
+      end
+      column do
+        panel "Comments" do
+          render partial: "admin/chart", locals: { scope: 'comments' }
+        end
+      end
+    end
   end
     # div class: "blank_slate_container", id: "dashboard_default_message" do
     #   span class: "blank_slate" do
