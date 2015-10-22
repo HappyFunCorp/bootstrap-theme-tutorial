@@ -34,6 +34,14 @@
 
         .share
           - if current_user
-            = link_to "Share on Facebook", "https://www.facebook.com/sharer.php?u=http%3A%2F%2Fboo.happyfuncorp.com%2Fcrush%2F#{@crush.slug}", class: "btn btn-default facebook", target: "_blank"
+            = link_to "Share on Facebook", "https://www.facebook.com/sharer.php?u=http%3A%2F%2Fboo.happyfuncorp.com%2Fcrush%2F#{@crush.slug}", class: "btn btn-default facebook", id: "facebook_link", target: "_blank"
           - else
             = link_to "Find your crush!", user_omniauth_authorize_path( :instagram ), class: "btn btn-default instagram"
+
+- content_for :javascripts do
+  :javascript
+    $(function() {
+      $("#facebook_link").click( function() {
+        ga('send', 'social', 'facebook', 'share', window.location.href );
+      })
+    })
