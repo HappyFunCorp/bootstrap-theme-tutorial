@@ -38,12 +38,15 @@ class Crush < ActiveRecord::Base
       crush.user = user
       crush.main_username = user.instagram_user.username
       crush.crush_username = crush_user.username
-      crush.comment_count = comment_total[crush_user_id]
-      crush.liked_count = liked_total[crush_user_id]
       crush.slug = slug
 
       crush.make_image
     end
+
+    crush.comment_count = comment_total[crush_user_id]
+    crush.liked_count = liked_total[crush_user_id]
+    crush.save
+
 
     crush
   end
