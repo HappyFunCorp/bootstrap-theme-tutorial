@@ -14,6 +14,8 @@ $state-info-text: white;
 $body-bg: $background-color;
 $text-color: $dark-gray;
 
+$smaller_screen_scale: 0.8;
+
 $border-radius-base:        2px;
 
 // --------------Bootstrap-----------------------------
@@ -44,6 +46,11 @@ $border-radius-base:        2px;
     height: 125px;
     background-repeat: no-repeat;
     background-position: center top;
+
+    @media (max-width: $screen-sm-min) {
+      background-size: 205px*$smaller_screen_scale 102px*$smaller_screen_scale;
+      height: 125px * $smaller_screen_scale;
+    }
   }
 }
 
@@ -68,7 +75,15 @@ $border-radius-base:        2px;
     background-image: image-url( 'art_intro_pumpkin2x.png' );
     background-size: 190px 198px;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center top;
+    margin-top: 2em;
+
+    @media (max-width: $screen-sm-min ) {
+      padding-top: 180px;
+      margin-top: 2em;
+      background-size: 190px*$smaller_screen_scale 198px*$smaller_screen_scale;
+    }
+
 
     .btn {
       @include box-shadow( inset -2px -2px 2px rgba(0, 0, 0, 0.3) );
@@ -99,7 +114,14 @@ $border-radius-base:        2px;
       background-image: image-url( 'logo_my_boo2x.png' );
       background-size: 142px 165px;
       background-repeat: no-repeat;
-      background-position: center top;      
+      background-position: center top;
+
+      @media (max-width: $screen-sm-min) {
+        padding-top: 185px*$smaller_screen_scale;
+
+        background-size: 142px*$smaller_screen_scale 165px*$smaller_screen_scale;
+      }
+
       a {
         pointer-events: none;
         cursor: default;
@@ -246,10 +268,20 @@ $border-radius-base:        2px;
       height: 592px; // 1184px / 2;
       width: 596px; // 1192px / 2;
     }
+
+    @media (max-width: $screen-sm-min ) {
+      width: 1192px * $smaller_screen_scale;
+      margin-left: -298px * $smaller_screen_scale;
+
+      img {
+        height: 592px * $smaller_screen_scale;
+        width: 596px * $smaller_screen_scale;
+      }
+    }
   }
 
   .foreground {
-    width: 1200;
+    width: 1200px;
     position: absolute;
     left: 50%;
     top: 0;
@@ -258,6 +290,17 @@ $border-radius-base:        2px;
     img {
       height: 727px;
       width: 1200px;
+    }
+
+    @media (max-width: $screen-sm-min ) {
+      top: 50px;
+      width: 1200px * $smaller_screen_scale;
+      margin-left: -600px * $smaller_screen_scale;
+
+      img {
+        height: 727px * $smaller_screen_scale;
+        width: 1200px * $smaller_screen_scale;
+      }
     }
   }
 }
@@ -339,7 +382,9 @@ footer {
   @extend .row;
 
   .face {
-    @extend .col-xs-2;
+    @extend .col-xs-6;
+    @extend .col-sm-3;
+    text-align: center;
 
     img {
       border-radius: 100%;
