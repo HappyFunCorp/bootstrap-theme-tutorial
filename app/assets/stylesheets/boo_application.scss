@@ -425,6 +425,13 @@ $scene-height: 700px;
 }
 
 .mailing {
+  h2 {
+    background-image: image-url("icon_cauldron2x.png");
+    background-size: 43px 50px; //205px 102px;
+    background-repeat: no-repeat;
+    background-position: center top;
+    padding-top: 80px;
+  }
   .btn {
     padding: 6px 12px;
   }
