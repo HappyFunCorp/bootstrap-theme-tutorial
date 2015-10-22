@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  post '/signup' => 'splash#signup', as: :splash_signup
+  root 'welcome#landing'
   namespace :admin do
     # get "/stats" => "stats#stats"
     devise_scope :admin_user do
@@ -37,13 +39,12 @@ Rails.application.routes.draw do
   # get 'welcome/loading_crush', as: :link_instagram
 
   devise_for :users, class_name: 'FormUser', :controllers => { omniauth_callbacks: 'omniauth_callbacks', registrations: 'registrations' }
-  root 'welcome#landing'
   get '/setup' => 'setup#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  # You can have the
+  #
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

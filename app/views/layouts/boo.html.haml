@@ -20,24 +20,41 @@
 
   %body{ :class => "#{ controller.controller_name }" }
     = render 'chromeframe'
-    .simple_nav.level_4
-      .container
-        - if current_user
-          = link_to 'Sign Out', destroy_user_session_path, :method=>:delete, class: "btn btn-warning btn-sm"
+    .lighter
+      = render 'flashes'
 
-    = render 'flashes'
-
-    .layout.level_1
-      .ted= image_tag 'art_ted_moon2x.png'
-    .grass.level_2
-    .layout.level_3
-      .foreground= image_tag 'art_foreground2x.png'
+      .layout.level_1
+        .ted= image_tag 'art_ted_moon2x.png'
+      .grass.level_2
+      .layout.level_3
+        .foreground= image_tag 'art_foreground2x.png'
     
     .content.level_4
+      .simple_nav
+        .container
+          - if current_user
+            = link_to 'Sign Out', destroy_user_session_path, :method=>:delete, class: "btn btn-warning btn-sm"
+
+
       = yield
 
-    %footer#footer.level_4
-      .container
+      #footer.container.mailing.footer
+        .row
+          .col-sm-6.col-sm-offset-3
+            %h2 Trick Or Treat!
+            %p
+              We hope you enjoy this sneak peak of a new product we are developing. This is just the beginning. So, go on. Sign up below if you dare and we will let you know as soon as it is ready.
+
+            = form_tag splash_signup_path, role: :form, :class=>'form-inline', :remote=>true do
+              .form-group
+                .input-group#signup
+                  = text_field_tag :signup_email, '',  :class=>'form-control', :placeholder=>'Enter email'
+                  %span.input-group-btn
+                    = submit_tag 'Sign up', :class=>'btn btn-primary'
+            %p#signup-message
+
+
+      .container.footer
         .small_header
           Brought to you by
         .hfc_logo
