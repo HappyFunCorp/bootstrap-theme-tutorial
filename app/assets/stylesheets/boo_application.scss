@@ -308,6 +308,7 @@ $border-radius-base:        2px;
 .level_4 { z-index: 4; position: relative; }
 
 #flash {
+  display: none;
   // position: relative;
   z-index: 4;
   position: absolute;
