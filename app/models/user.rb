@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :omniauthable, :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable
+
   def instagram
     identities.where( :provider => "instagram" ).first
   end
@@ -75,5 +76,9 @@ class User < ActiveRecord::Base
 
   def crush
     crushes.order( "created_at desc" ).first || Crush.find_for_user( self )
+  end
+
+  def connected_instagram_users
+    (instagram_user && instagram_user.connected_instagram_users) || []
   end
 end

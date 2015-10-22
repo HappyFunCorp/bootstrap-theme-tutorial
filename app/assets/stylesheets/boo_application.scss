@@ -333,3 +333,16 @@ footer {
     height: 38px;
   }
 }
+
+#people {
+  @extend .row;
+
+  .face {
+    @extend .col-xs-2;
+
+    img {
+      border-radius: 100%;
+      @extend .img-responsive;
+    }
+  }
+}

@@ -25,4 +25,13 @@ class InstagramUser < ActiveRecord::Base
 
     u
   end
+
+  def connected_instagram_users
+    ids = (
+      InstagramLike.top_likers_ids(self).collect{ |x| x['instagram_user_id'] } +
+      InstagramComment.top_commentors_ids(self).collect{ |x| x['instagram_user_id'] }
+      ).sort.uniq
+
+    InstagramUser.where( "id in (?)", ids )
+  end
 end

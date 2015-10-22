@@ -5,25 +5,59 @@
 
       = progress_bar percentage: 0, animated: true
 
+      #people
+
 - content_for :javascripts do
   :javascript
+
+    var update_people = function( people ) {
+      if( people.status == "done" ) {
+        location.reload();
+      }
+
+      var html = "";
+      $.map( people.sort(function() { return 0.5 - Math.random() }), function( obj ) {
+
+        html += "<div class='face'><img src='" 
+        html += obj.profile_picture
+        html += "'></div>"
+
+        // html += "<div class='face'><div class='thumbnail'><img src='" 
+        // html += obj.profile_picture
+        // html += "'><div class='caption'>"
+        // html += obj.username
+        // html += "</div></div></div>"
+      });
+
+      $("#people").html( html );
+    }
+
+    var refresh_list = function() {
+      $.get( '/crushingit.json', "json" ).done( update_people );
+    }
+
     $( function() {
       // This is just incase
-      setInterval( function() {
-        location.reload();
-      }, 10000 );
+      // setInterval( function() {
+      //   location.reload();
+      // }, 10000 );
 
+
+
+      refresh_list();
+      setInterval( refresh_list, 2000 );
 
 
       var value = 0;
       var update_value = function() {
         value = value + 5;
-        if( value > 100 ) {
-          location.reload();
-        }
+         if( value > 100 ) {
+           value = 0;
+      //     location.reload();
+         }
 
-        $(".progress-bar").css('width', value+'%').attr('aria-valuenow', value);
+         $(".progress-bar").css('width', value+'%').attr('aria-valuenow', value);
       }
 
-      setInterval( update_value, 250 );
+      setInterval( update_value, 500 );
     } );

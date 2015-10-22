@@ -92,12 +92,15 @@ RSpec.describe CrushesController, type: :controller do
       expect( flash[:notice] ).to eq( "Problem syncing your account, please try again" )
     end
 
-    # it "should return json when that format is requested" do
-    #   login_with user
+    it "should return json when that format is requested" do
+      post( [bschippers, holly, alanna], [alanna] )
+      login_with user
 
-    #   get :loading, format: :json
+      get :loading, format: :json
 
-    #   p response.body
-    # end
+      results = JSON.parse response.body
+
+      expect( results.length ).to eq(3)
+    end
   end
 end

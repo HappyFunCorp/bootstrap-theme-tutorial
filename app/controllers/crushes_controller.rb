@@ -14,12 +14,25 @@ class CrushesController < ApplicationController
   def loading
     logger.debug "Current user state #{current_user.state}"
     if current_user.state == 'synced'
-      redirect_to current_user.crush
+      if request.format.symbol == :json
+        render json: { status: "done" }
+      else
+        redirect_to current_user.crush
+      end
       return
     elsif current_user.state == 'broken'
       current_user.refresh
       sign_out :user
       redirect_to root_path, notice: "Problem syncing your account, please try again"
+
+      return
+    end
+
+    respond_to do |format|
+      format.html
+      format.json do
+        render json: current_user.connected_instagram_users
+      end
     end
   end
 
