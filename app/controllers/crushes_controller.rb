@@ -12,12 +12,14 @@ class CrushesController < ApplicationController
   end
 
   def loading
+    logger.debug "Current user state #{current_user.state}"
     if current_user.state == 'synced'
       redirect_to current_user.crush
       return
     elsif current_user.state == 'broken'
       current_user.refresh
-      redirect_to user_omniauth_authorize_path( :instagram )
+      sign_out :user
+      redirect_to root_path, notice: "Problem syncing your account, please try again"
     end
   end
 

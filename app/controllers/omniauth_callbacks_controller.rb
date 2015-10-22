@@ -25,7 +25,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       # This is because we've created the user manually, and Device expects a
       # FormUser class (with the validations)
       @user = FormUser.find @user.id
-      @user.refresh
       sign_in_and_redirect @user, event: :authentication
       set_flash_message(:notice, :success, kind: provider.capitalize) if is_navigational_format?
     else

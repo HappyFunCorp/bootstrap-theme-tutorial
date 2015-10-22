@@ -19,6 +19,4 @@ RSpec.describe WelcomeController, type: :controller do
       expect( response ).to redirect_to( crushes_path )
     end
   end
-
-
 end

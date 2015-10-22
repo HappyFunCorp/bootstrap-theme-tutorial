@@ -45,7 +45,8 @@ class User < ActiveRecord::Base
       logger.debug "Syncing posts"
       sync_instagram_posts
       update_attribute( :state, 'synced' )
-    rescue
+    rescue Exception => e
+      logger.error e
       update_attribute :state, 'broken'
     end
     update_attribute( :last_synced, Time.now )
@@ -69,10 +70,10 @@ class User < ActiveRecord::Base
 
     update_attribute( :last_synced, Time.now )
     reload
+    Crush.find_for_user( self )
   end
 
   def crush
-    # crushes.order( "created_at desc" ).first || 
-    Crush.find_for_user( self )
+    crushes.order( "created_at desc" ).first || Crush.find_for_user( self )
   end
 end
