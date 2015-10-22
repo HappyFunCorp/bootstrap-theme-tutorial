@@ -28,4 +28,6 @@ module Ic
       g.scaffold_controller "scaffold_controller"
     end  
   end
+
+  config.active_job.queue_adapter = :delayed_job
 end
