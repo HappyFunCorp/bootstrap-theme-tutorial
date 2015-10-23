@@ -3,7 +3,11 @@ class SetupController < ApplicationController
   layout :false
 
   def index
-    @env = File.read( File.join( Rails.root, ".env" ) )
+    begin
+      @env = File.read( File.join( Rails.root, ".env" ) )
+    rescue
+      @env = "couldn't load file"
+    end
     @docs = files
   end
   
