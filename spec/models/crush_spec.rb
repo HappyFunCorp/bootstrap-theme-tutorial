@@ -56,7 +56,7 @@ RSpec.describe Crush, type: :model do
     expect( InstagramPost.count ).to eq(0)
     c = Crush.find_for_user user
 
-    expect( c.instagram_user_id ).to eq( user.id )
-    expect( c.crush_user_id ).to eq( user.id )
+    expect( c.instagram_user_id ).to eq( wschenk.id )
+    expect( c.crush_user_id ).to eq( wschenk.id )
   end
 end
