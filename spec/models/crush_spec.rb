@@ -53,6 +53,7 @@ RSpec.describe Crush, type: :model do
 
   it "should work with an empty feed" do
     expect( wschenk ).to_not be_nil
+    expect( InstagramPost.count ).to eq(0)
     c = Crush.find_for_user user
 
     expect( c.instagram_user_id ).to eq( user.id )
