@@ -31,7 +31,7 @@ class CrushesController < ApplicationController
     respond_to do |format|
       format.html
       format.json do
-        render json: current_user.connected_instagram_users
+        render json: current_user.connected_instagram_users[0..7]
       end
     end
   end

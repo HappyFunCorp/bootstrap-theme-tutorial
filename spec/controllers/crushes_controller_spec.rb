@@ -102,5 +102,24 @@ RSpec.describe CrushesController, type: :controller do
 
       expect( results.length ).to eq(3)
     end
+
+    it "should return a max of 8 results" do
+      10.times do |t|
+        user = create( :instagram_user, username: "user #{t}" )
+        if t % 2 == 0
+          post [user], []
+        else
+          post [], [user]
+        end
+      end
+
+      login_with user
+
+      get :loading, format: :json
+
+      results = JSON.parse response.body
+
+      expect( results.length ).to eq(8)
+    end
   end
 end
