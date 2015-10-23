@@ -48,7 +48,7 @@ class CrushesController < ApplicationController
 
     set_meta_tags og: {
       title:    "#{@crush.instagram_user.username}'s crush",
-      description: "Click on this link to see who your secret crush is on Instagram",
+      description: "#{@crush.instagram_user.username}'s crush is #{@crush.crush_username}!  Click on this link to see who you boo is on Instagram!",
       type:     'website',
       url:      "http://boo.happyfuncorp.com#{crush_path(@crush)}",
       image:    { _: @crush.image_path, width: 600, height: 315 }
