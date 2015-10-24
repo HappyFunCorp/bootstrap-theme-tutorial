@@ -15,7 +15,7 @@ class Crush < ActiveRecord::Base
     liked_total = {}
 
     likers.select do |v|
-      v['instagram_user_id'] != user.instagram_user.id
+      v['instagram_user_id'].to_i != user.instagram_user.id
     end.each do |v|
       results[v['instagram_user_id']] ||= 0
       results[v['instagram_user_id']] += v['cnt'].to_i
@@ -23,7 +23,7 @@ class Crush < ActiveRecord::Base
     end
 
     comments.select do |v|
-      v['instagram_user_id'] != user.instagram_user.id
+      v['instagram_user_id'].to_i != user.instagram_user.id
     end.each do |v|
       results[v['instagram_user_id']] ||= 0
       results[v['instagram_user_id']] += v['cnt'].to_i

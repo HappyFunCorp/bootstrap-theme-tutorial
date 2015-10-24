@@ -64,6 +64,6 @@ RSpec.describe Crush, type: :model do
     post [wschenk, alanna], [wschenk,wschenk]
 
     c = Crush.find_for_user user
-    expect( c.crush_user_id ).to eq( alanna.id )
+    expect( c.crush_username ).to eq( alanna.username )
   end
 end
