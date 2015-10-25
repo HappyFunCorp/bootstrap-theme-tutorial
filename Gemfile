@@ -77,8 +77,9 @@ group :test do
   gem 'webmock'
 end
 
+gem 'pg'
 group :production do
-  gem 'pg'
+  # gem 'pg'
   gem 'lograge'
   gem 'newrelic_rpm'
 end
@@ -106,3 +107,5 @@ gem 'sidekiq'
 gem 'activejob'
 gem 'quiet_assets'
 gem 'gibbon'
+
+gem 'googlecharts'

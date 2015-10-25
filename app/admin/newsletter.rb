@@ -1,5 +1,7 @@
 if !ENV['MAILCHIMP_API_KEY'].blank?
   ActiveAdmin.register_page "Newsletter"  do
+    menu priority: 10
+
     content do
       if !params[:list_id]
         @lists = Gibbon::Request.new(api_key: ENV['MAILCHIMP_API_KEY']).lists.retrieve

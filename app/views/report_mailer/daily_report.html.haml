@@ -1,0 +1,11 @@
+%h1 Todays report
+
+- @models.each_with_index do |model, idx|
+  %h2= model
+  - d = @data[idx]
+
+  %table
+    - d.keys.reverse[0..4].each do |k|
+      %tr
+        %th=k
+        %td=d[k]
