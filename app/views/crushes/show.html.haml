@@ -22,14 +22,19 @@
           .stats
             %code
               = link_to "@#{@crush.crush_user.username}", posts_for_user_path( @crush.crush_user )
-            has hearted
-            %b= @crush.liked_count
-            and commented on
-            %b= @crush.comment_count
+            has
+            - if @crush.liked_count.to_i > 0
+              hearted
+              %b= @crush.liked_count
+              - if @crush.comment_count.to_i > 0
+                and
+            - if @crush.comment_count.to_i > 0
+              commented on
+              %b= @crush.comment_count
             of 
             %code
               ="@#{@crush.instagram_user.username}'s"
-            photos!
+            recent photos!
 
 
         .share

@@ -109,3 +109,5 @@ gem 'quiet_assets'
 gem 'gibbon'
 
 gem 'googlecharts'
+
+gem 'active_skin'
