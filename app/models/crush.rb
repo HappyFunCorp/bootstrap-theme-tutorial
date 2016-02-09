@@ -37,7 +37,7 @@ class Crush < ActiveRecord::Base
 
     crush = Crush.where( instagram_user_id: user.instagram_user.id, crush_user_id: crush_user_id ).first_or_create do |crush|
       crush_user = InstagramUser.find crush_user_id
-      slug = "#{user.instagram_user.username} #{crush_user.username}".hash.abs.to_s(36)
+      slug = "#{user.instagram_user.username}-#{crush_user.username}".hash.abs.to_s(36)
 
       crush.user = user
       crush.main_username = user.instagram_user.username
@@ -81,9 +81,9 @@ class Crush < ActiveRecord::Base
       draw_regular_image self_file, crush_file, outfile_name
     end
 
-    system( "open #{outfile_name}")
+    # system( "open #{outfile_name}")
 
-    # save_to_s3 outfile_name
+    save_to_s3 outfile_name
 
     outfile.close
   end
