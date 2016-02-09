@@ -23,11 +23,14 @@
     .lighter
       = render 'flashes'
 
-      .layout.level_1
-        .ted= image_tag 'art_ted_moon2x.png'
-      .grass.level_2
-      .layout.level_3
-        .foreground= image_tag 'art_foreground2x.png'
+      .tree.level_1
+        = image_tag 'valentines/art_tree_2x.png'
+
+      / .layout.level_1
+      /   .ted= image_tag 'art_ted_moon2x.png'
+      / .grass.level_2
+      / .layout.level_3
+      /  .foreground= image_tag 'valentines/BG_2x.png'
     
     .content.level_4
       .simple_nav
@@ -40,7 +43,7 @@
 
       #footer.container.mailing.footer
         .row
-          .col-sm-6.col-sm-offset-3
+          .col-sm-6.col-sm-offset-3.col-xs-10.col-xs-offset-1
             %h2 Trick Or Treat!
             %p
               We hope you enjoy this sneak peak of a new product we are developing. This is just the beginning. So, go on. Sign up below if you dare and we will let you know as soon as it is ready.
@@ -61,7 +64,7 @@
           = link_to "http://happyfuncorp.com/" do
             = image_tag "logo_hfc2x.png"
 
-    .blackbottom
+    / .blackbottom
 
     -# Javascript at the bottom for fast page loading
     = render 'javascripts'

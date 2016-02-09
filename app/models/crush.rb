@@ -81,9 +81,9 @@ class Crush < ActiveRecord::Base
       draw_regular_image self_file, crush_file, outfile_name
     end
 
-    # system( "open #{outfile_name}")
+    system( "open #{outfile_name}")
 
-    save_to_s3 outfile_name
+    # save_to_s3 outfile_name
 
     outfile.close
   end
@@ -150,18 +150,22 @@ class Crush < ActiveRecord::Base
 
     logger.debug "Generated crush image"
 
-    heart_image = Magick::Image.read( File.join( Rails.root, "app/assets/images/fb_boo_badge1x.png" ).to_s ).first
+    heart_image = Magick::Image.read( File.join( Rails.root, "app/assets/images/valentines/icon_crush_1x.png" ).to_s ).first
+    out_image = Magick::Image.read( File.join( Rails.root, "app/assets/images/valentines/Facebook_Share_1x.png" ).to_s ).first
 
-    out_image = Magick::Image.read( File.join( Rails.root, "app/assets/images/fb_bkg1x.png" ).to_s ).first
+    # out_image = Magick::Image.read( File.join( Rails.root, "app/assets/images/fb_bkg1x.png" ).to_s ).first
 
     
-    out_image.composite! white_circle, 390, 60, Magick::OverCompositeOp
-    out_image.composite! self_image, 397, 67, Magick::OverCompositeOp
+    # out_image.composite! white_circle, 390, 60, Magick::OverCompositeOp
+    # out_image.composite! self_image, 397, 67, Magick::OverCompositeOp
+    out_image.composite! white_circle, 400, 60, Magick::OverCompositeOp
+    out_image.composite! self_image, 407, 67, Magick::OverCompositeOp
 
     out_image.composite! white_circle, 256, 60, Magick::OverCompositeOp
     out_image.composite! crush_image, 263, 67, Magick::OverCompositeOp
 
-    out_image.composite! heart_image, 377, 160, Magick::OverCompositeOp
+    # out_image.composite! heart_image, 377, 160, Magick::OverCompositeOp
+    out_image.composite! heart_image, 383, 125, Magick::OverCompositeOp
 
     out_image.write outfile_name
   end
