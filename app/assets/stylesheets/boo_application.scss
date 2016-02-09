@@ -191,11 +191,11 @@ $scene-height: 750px;
       // background-repeat: no-repeat;
       // background-position: center top;
 
-      @media (max-width: $screen-sm-min) {
-        padding-top: 185px*$smaller_screen_scale;
+      // @media (max-width: $screen-sm-min) {
+      //   padding-top: 185px*$smaller_screen_scale;
 
-        background-size: 142px*$smaller_screen_scale 165px*$smaller_screen_scale;
-      }
+      //   background-size: 142px*$smaller_screen_scale 165px*$smaller_screen_scale;
+      // }
 
       a {
         pointer-events: none;
