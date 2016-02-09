@@ -181,6 +181,8 @@ class Crush < ActiveRecord::Base
     url = object.public_url.to_s
     logger.debug "File is now at #{url}"
 
+    url = url.gsub( /https/, "http" )
+
     update_attribute :image_path, url
   end
 
